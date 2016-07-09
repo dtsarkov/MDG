@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="98F2FC99-0" name="GDW 2.0" version="1.0" notes="GDW 2.0"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="TCF Loop" alias="TL_&lt;CID&gt;_NAME" metatype="TCF Loop" notes="" cx="200" cy="145" bgcolor="11723519" fontcolor="0" bordercolor="139" borderwidth="1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIANCFzEj2DJNmhAEAAMAFAAAHABEAc3RyLmRhdFVUDQAH4JFdV+CRXVfgkV1X
+vVNNS8NAFJxrBP9DsZcKBevXSTxIUTxIFS30WGI3poUmSrJVRPzvztvN5stUmhwkZPP2Zebt
+7LzdFEv4eEOAHiJGK8T4wj724GHN+SdesYHGlJFFXfI9wDPzCRQzCWcXGSNm9slUVIw+MrQm
+ZkOkQ6WMNavLWgFnmrXXjAasJDzN72GOdjjNPwOMMMQxx9FWhP27K6qMENWKejbcXVryRXRp
+skVzwHjId1LR6PZVcAp8L/ezi6MeMQlzLyYvkcItxxVCrqYz9gnOS4x2/nqm6oJZn/gwQ1pv
+nIt1Nx2z2THrl92ddWtWW7GZZ52ecBZxNqbSiHmf+rTJxEa51Bvjmrgpx8da5cKDourfFcv9
+8Yy/0jmfysSJG84CRirvU5xVK/fIwzvmuDKeh0Q47CJbo95Tj+ra4Y/4dO+TPUVyHjRvZWKc
+EW+UcbyfO9Svufnd6KfrbdU5UbjLWT2lvv907remGbmK2CWZln9WuT/tb1CXO1Tviz39d7jn
+87ClD+4ro41/AFBLAQIXCxQAAAAIANCFzEj2DJNmhAEAAMAFAAAHAAkAAAAAAAAAAAAAgAAA
+AABzdHIuZGF0VVQFAAfgkV1XUEsFBgAAAAABAAEAPgAAALoBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_tagGroupings" value="TCF::Process Names=Properties;TCF::Pattern=Properties;TCF::Number of Threads=Properties;"/>
+						<Property name="_tagGroups" value="Properties"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="TCF::Number of Threads" type="" description="Number  of threads system will use to executed TCF processes" unit="" values="" default="1"/>
+					<Tag name="TCF::Pattern" type="enumeration" description="TCF Apply pattern used for TCF processes executed by the job" unit="" values="Insert Append,Delta Apply,Full Apply" default="Insert Append"/>
+					<Tag name="TCF::Process Names" type="" description="Comma separated list of TCF process name patterns the job uses to determine list of TCF processes to execute. The patterns are specified using SQL wildcard symbols." unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="H-AND" alias="AND" notes="" cx="90" cy="70" bgcolor="16777215" fontcolor="0" bordercolor="16711680" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Synch(H)"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="V-AND" alias="AND" notes="" cx="90" cy="70" bgcolor="16777215" fontcolor="16711680" bordercolor="16711680" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Synch(V)"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="BTEQ Job" notes="" cx="100" cy="45" bgcolor="9342520" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
+						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="AS::success_codes" type="" description="Comma separated list of exit codes treated as success" unit="" values="" default=""/>
+					<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Box Job" notes="" cx="200" cy="145" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIACqGzEgkNJQFggEAAL4FAAAHABEAc3RyLmRhdFVUDQAHgZJdV4GSXVeBkl1X
+vVPBSsNAEH3XCP5DsZcKBaviSTxoUTxV0EK9SezGtNBESbaKiP/um91sso2pNDlIyO7M7JvZ
+t292cywQ4g0RekhoLZHiC/vYQ4AV/U+8Yg2NKS2LuuB/gGfGMyhGMnrnRUbK6IOpqGh9FGhN
+zJpIh8ppa1aXvSJ6mrVXtAasJHma82GJdjjNlQFGGOKY42grwq7uivIRwlqRz5qnyz1dhJdm
+tnCOaA/5TzY4unNVORW+V+rZRdGAmIyxFxMXS+GW4xIxd9NF9gnOvIx2+gam6pzRkPi4QFpt
+nIp1NV1ms2JWL3s6q9astmNznlV6Qi+hNybThPGQ/LSJpIa51Bvjmrgpx/ta5UqDqurfFf3+
+BEZf6VxIZqLEDb2Ilir7lBbV/B4FeMcTLo3mMREOOy/2qPc0ILt2+CN+3ftkb5HcB81XmRll
+RBtlFO+XCvVran436ul6u6mcMNzlrp6S338q95vTjLmK2AUzHSf//bR/QV3eUL0v9vZf4Q6P
+W7rgZhmt/QNQSwECFwsUAAAACAAqhsxIJDSUBYIBAAC+BQAABwAJAAAAAAAAAAAAAIAAAAAA
+c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
+						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Bridge" notes="" cx="90" cy="70" bgcolor="15333118" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Table"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="EndStream" notes="" cx="50" cy="45" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
+						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Hub" notes="" cx="90" cy="70" bgcolor="16777193" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Table"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Link" notes="" cx="90" cy="70" bgcolor="15663086" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Table"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="H-OR" alias="OR" notes="" cx="90" cy="70" bgcolor="16777215" fontcolor="0" bordercolor="32768" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Synch(H)"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="V-OR" alias="OR" notes="" cx="90" cy="70" bgcolor="16777215" fontcolor="32768" bordercolor="32768" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Synch(V)"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Poll Job" notes="The job will keep polling TCF/Mainframe Process completion by querying TCF Metadata/UTIL_UPI_ISAC table. " cx="100" cy="45" bgcolor="12632256" fontcolor="65535" bordercolor="0" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
+						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="AS::Polling Offset" type="" description="Business Date offset (+/-). Default value is 0" unit="" values="" default=""/>
+					<Tag name="AS::Polling Type" type="enumeration" description="" unit="" values="TCF,UPI,UPI2" default="TCF"/>
+					<Tag name="AS::Polling Stream ID" type="" description="Specify coma separated list of TCF Stream keys or MVS job names" unit="" values="" default=""/>
+					<Tag name="AS::Polling Table List" type="" description="Comma separated list of tables" unit="" values="" default=""/>
+					<Tag name="AS::Polling Interval" type="int" description="Time interval in minutes between attempts " unit="" values="" default=""/>
+					<Tag name="TD::User Name" type="" description="Teradata user name" unit="" values="" default=""/>
+					<Tag name="AS::Polling Retries" type="int" description="Number of attempts" unit="" values="" default=""/>
+					<Tag name="AS::Polling Exit Code" type="" description="Exit code job returns when it exceeds number of attempts (default 1) " unit="" values="" default=""/>
+					<Tag name="AS::success_codes" type="" description="Comma separated list of exit codes treated as success" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Rerence Table" notes="" cx="90" cy="70" bgcolor="16053462" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Table"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Satellite" notes="" cx="90" cy="70" bgcolor="14745599" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Table"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Send Event" notes="" cx="100" cy="45" bgcolor="13434828" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
+						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="StartStream" notes="" cx="50" cy="45" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
+						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="TCF Job" notes="" cx="185" cy="45" bgcolor="16729600" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAKZBs0hVpOJYrgEAACAIAAAHABEAc3RyLmRhdFVUDQAHv3U9V791PVe/dT1X
+tZVPT8JAEMXfFRO/Q9MTJkbjVU8CaeQgQalcDAeiRZvwL7RoiOG7+2bKoi1bXBpJU7rdvn37
+m+lMSfCOIeaI4GHCUYwpR184xQlqeMWCc5+cGyLlsw/qku2KOs5wo8pMfckjRBMBHbq6IqVq
+wdXJRjHnneyQcq2PC+rkeObpb71qVIw4U+d5R5eEnkO86YrM/ZpH3t/HuXq0dS+ZS3l/y/2E
+c8o4xN/T08RWpGlT/5tiTW2Esfp5W6ZDiVrqkfKZ4Rlj5UDTOgpNgCU9xgeyBHtZylY9oVNY
+lV1tleBhoHzl9RRwP4nSXknVaiikx5IeL5oriUVUC+oi3kvOfFw55CeskJ08bZYbd/K+vldR
+xhv6GDNI5442eSrSl3H097Afi75JVqnCiOzSpz3tj5TqInU5QW8Pd9kaG7WpRxfuLt1mZJZv
+YAKpyVh7W96FO3nwT+TZuKjL95GJTjqpwVpPVGv4Q44mdJhBvvIpKWL+rkqcq3TYX3uaHd2z
+16jYbbYM7qrs2XOP9xEPuNcoV5B/Hls81Xyy73dHu9zuW5aJ3SjlTZodBrl4fzKTXdf4BlBL
+AQIXCxQAAAAIAKZBs0hVpOJYrgEAACAIAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQF
+AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_Tag" value="0"/>
+						<Property name="_tagGroupings" value="TCF::Pattern=Properties;TCF::RQM Type=Properties;TCF::Delete Rows Added By Any Process=Properties;TCF::Key Columns=Properties;TCF::Process Filter=Flags;TCF::Truncate Target=Flags;TCF::Verification Flag=Flags;TCF::Collect Stats=Flags;TCF::Process Filter List=Flags;TCF::Business Temporality=Business Temporality;TCF::BT Key Columns=Business Temporality;TCF::BT Backdated data=Business Temporality;TD::User Name=Teradata;"/>
+						<Property name="_tagGroups" value="Properties,Flags,Business Temporality,Teradata"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="TCF::Business Temporality" type="enumeration" description="" unit="" values="0,1" default="0"/>
+					<Tag name="TCF::Collect Stats" type="enumeration" description="" unit="" values="0,1" default="0"/>
+					<Tag name="TCF::Delete Rows Added By Any Process" type="enumeration" description="" unit="" values="Y,N" default="N"/>
+					<Tag name="TCF::Key Columns" type="" description="" unit="" values="" default=""/>
+					<Tag name="TCF::Pattern" type="enumeration" description="" unit="" values="Insert Append,Delta Apply,Full Apply" default="Insert Append"/>
+					<Tag name="TCF::Process Filter" type="enumeration" description="" unit="" values="0,1" default="0"/>
+					<Tag name="TCF::RQM Type" type="enumeration" description="" unit="" values="None,RQM3,RQM4,RQM5" default="RQM4"/>
+					<Tag name="TCF::Truncate Target" type="enumeration" description="" unit="" values="0,1" default="0"/>
+					<Tag name="TCF::Verification Flag" type="enumeration" description="" unit="" values="0,1" default="1"/>
+					<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
+					<Tag name="TCF::BT Backdated data" type="enumeration" description="Specify how to process backdated data" unit="" values="Insert,Override,Disregard" default="Insert"/>
+					<Tag name="TCF::BT Key Columns" type="" description="List of key columns used to ..." unit="" values="" default=""/>
+					<Tag name="TCF::Process Filter List" type="" description="Comma separated list of additional TCF process names need to be included in the output view WHERE condition." unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="TCF Stream" notes="" cx="150" cy="100" bgcolor="16777198" fontcolor="0" bordercolor="0" borderwidth="2" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAEyl20gbKZ1v4gIAAHgNAAAHABEAc3RyLmRhdFVUDQAHro9xV66PcVeuj3FX
+zVbbbtNAEJ1XI/UfLPLQRKpEuPSBoCKgpYAoBTWu+lChyMROE5E4KHa4qOq/c2Yv9q69juxE
+XGR5vZczM7tnz+w6pSmF9I1i8mmB2owSuqU9ukcezdH+RUtaU0YBahJ1hPc+fUH/iiL0rNB6
+piwS9A6Fxwi1HwqdAbMGUqMe4EnRzhCB48VoZfA/R60Lb2yb4duzLDQ2w2iX+nRAD1H2N6Ik
+og3SRF1gdIzxELgbNTuJ0R6rnnnlEdazBkOpwS2vK0NEXnOM+gHec2uNbku2Y64j8COtjuk1
+LAOUF4Z9sa6jf/bIOZirLlbs56raRlceMCv0TUQ/1yJ6i3KGfZnCi7Q+xE4UFu1VJm3Ye7td
+19ZDEe0TyoSuEDNCayq0Zcb4gLjfgQlqdezRmZqxxLijun09beSpjKrXHjPGdam9qxJfbjup
+9nO0FmgdI/IC/SGYzURPIniv1zJ71l/T62aPpsI8YoWw9kLMjPfwFK0YtShXWqK8mSrzwOaI
+XgrF3AChsWMVo6xKD7Nrh99NYTIPeEdZ1YnguZPz0ilx6EJfAxVgxm9ogHKIcgDFytya0U+M
+fi55uXPuhdaFzTqvrkmmPiYzU/8869U5FfnpK/snOD/KO9X2/PCAnBDr3xdcpeA6xBwZH0C3
+p4LvIfGNGItd8+kdnQgvvnhNNs39kzlV7N0mb1Ud3GGE1c/r2Rxjny6hp/d498WMbC9F3T55
+XLcnP81OH+1Xf/+3W0zfvyZzUhmcM3M8YyDm4ubq0iPo6FBls73O7XLf3iNWgU/P8fK+yxMw
+RWuJ0QFxFrCdn1vW61Fnf0R8G6fIqCWwI/y1xXi+iji9iibtmVxjtHqe1HnsAF09XeqUWY2k
+lenyUsfUi5yT5oxwnktmR8R/MHy2pjvw4fb3d9nQ57/7lrW9s7o+gqWJUnmhq+YcvsI/Qaqy
+PxUKPQGGz2bb9/asNo2wK899p32VOc2wr/TfhfeeZSetZPkbUEsBAhcLFAAAAAgATKXbSBsp
+nW/iAgAAeA0AAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB66PcVdQSwUGAAAAAAEA
+AQA+AAAAGAMAAAAA</Image>
+				<AppliesTo>
+					<Apply type="PackagingComponent">
+						<Property name="_AttInh" value="0"/>
+						<Property name="_AttPkg" value="0"/>
+						<Property name="_AttPri" value="0"/>
+						<Property name="_AttPro" value="0"/>
+						<Property name="_AttPub" value="0"/>
+						<Property name="_ConInh" value="0"/>
+						<Property name="_Constraint" value="0"/>
+						<Property name="_OpInh" value="0"/>
+						<Property name="_OpPkg" value="0"/>
+						<Property name="_OpPri" value="0"/>
+						<Property name="_OpPro" value="0"/>
+						<Property name="_OpPub" value="0"/>
+						<Property name="_Tag" value="0"/>
+						<Property name="_tagGroupings" value="TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;"/>
+						<Property name="_tagGroups" value="TCF Properties,Autosys Properties"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="AS::days_of_week" type="" description="" unit="" values="" default="All"/>
+					<Tag name="AS::machine" type="" description="" unit="" values="" default="au_cba_bidseng_91_buh"/>
+					<Tag name="AS::Prefix" type="" description="au_cba_&lt;System&gt;_p01_&lt;Source System&gt;_wd_&lt;Stream ID&gt;_&lt;Description&gt;" unit="" values="" default="au_cba_rbsbus_p01_SSS_wd_SID_DESCR"/>
+					<Tag name="AS::profile" type="" description="" unit="" values="" default="/cba_app/RBSBUS/PROD/"/>
+					<Tag name="AS::start_times" type="" description="" unit="" values="" default="23:00"/>
+					<Tag name="TCF::Stream ID" type="" description="TCF Stream Key" unit="" values="" default=""/>
+					<Tag name="TCF::Business Date Offset" type="" description="" unit="" values="" default="0"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="View" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="EAUML::view" baseStereotypes="EAUML::view">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="call" notes="" cx="90" cy="70" bgcolor="16777215" fontcolor="0" bordercolor="10917" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Dependency">
+						<Property name="_lineStyle" value="orthogonalS"/>
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="database" notes="" cx="90" cy="70" bgcolor="16316664" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAOCLzEg2uU0EggEAALYFAAAHABEAc3RyLmRhdFVUDQAHhJxdV4ScXVeEnF1X
+vVPBSsNAEH3XCP5DsJcKBaviSTxoVTz1oIUeJe3GWmijJBtFxH/3zW423SyNhBwkZHdm9s3s
+zJvZAq9I8I4UMbaU1sjwjUMcIMKG+hfeUEJjRsmirvgfYUF7DkVLTu2y8shofTIRFaXPCq2J
+KYl0qBN+BXXNG+S+lJpm/A2lIaMV9JUTRfm49nJYzdMhxhjhlOu4FWFPu6LaEeGp1KaYY0kO
+Co89yVzTU6pKKY/4TxsV2NX32eHjmvU+vEfE5LS9GLtICg9c11jxNl15n+HC8+jXhchEXxKZ
+0GdVoS1HjuuQc+e5nznLm63SsjYPbtzvZxmfUttSmzDbLe0J89PGknG38Sa4I27G9TGI7HY/
+6t8R/T5FhmfpYMLMhIl7aiklVfcrq6L5vYrwgWdcG3ZXRDjssroj7G3E7Lridz4yEdJXzXeY
+m+qkPmVYG9RVDgJGfvZy4vrTrF4mqMvcnXMW/qf6XeXNnOZmjjUjxS059X0Nfd5D2B87ybe4
+aemF22W18i9QSwECFwsUAAAACADgi8xINrlNBIIBAAC2BQAABwAJAAAAAAAAAAAAAIAAAAAA
+c3RyLmRhdFVUBQAHhJxdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Package">
+						<Property name="_AttInh" value="0"/>
+						<Property name="_AttPkg" value="0"/>
+						<Property name="_AttPri" value="0"/>
+						<Property name="_AttPro" value="0"/>
+						<Property name="_AttPub" value="0"/>
+						<Property name="_ConInh" value="0"/>
+						<Property name="_Constraint" value="0"/>
+						<Property name="_OpInh" value="0"/>
+						<Property name="_OpPkg" value="0"/>
+						<Property name="_OpPri" value="0"/>
+						<Property name="_OpPro" value="0"/>
+						<Property name="_OpPub" value="0"/>
+						<Property name="URI" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="send" notes="" cx="90" cy="70" bgcolor="16777215" fontcolor="16711680" bordercolor="16711680" borderwidth="1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIADKBzUjIKuCAbgAAAI4AAAAHABEAc3RyLmRhdFVUDQAHpdpeV6XaXlel2l5X
+HY3BCoJQEEXPNqF/EF08W/QDtkqQNrnKHygSCkwjRYjo3z08Lndg5p6ZmXhw5U1HSsOTu+rt
+KkZmNfLiLHFz1sv82JKwceMjPUgUBCbTwc2Uvc7IaTlyorRerCU1S2Rm85Zv/JhLBnYc4s2/
+XgFQSwECFwsUAAAACAAygc1IyCrggG4AAACOAAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRh
+dFVUBQAHpdpeV1BLBQYAAAAAAQABAD4AAACkAAAAAAA=</Image>
+				<AppliesTo>
+					<Apply type="Dependency">
+						<Property name="_lineStyle" value="orthogonalS"/>
+						<Property name="_subtypeProperty" value="GDW 2.0::Send Event Connector::AS::Event Type"/>
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="AS::Event Type" type="enumeration" description="" unit="" values="JOB_ON_ICE,JOB_OFF_ICE,JOB_ON_HOLD,JOB_OFF_HOLD,JOB_ON_NOEXEC,JOB_OFF_NOEXEC,STARTJOB,KILLJOB" default=""/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+	</Content>
+</UMLProfile>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="DADF1455-E" name="GDW 2.0 Diagrams" version="1.0" notes="GDW 2.0 Diagrams"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Data Flow Diagram" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Component">
+						<Property name="pdata" value="HideParents=0;UseAlias=0;HideOps=1;HideAtts=1;"/>
+						<Property name="alias" value="DataFlow"/>
+						<Property name="diagramID" value="GDW20DataFlow"/>
+						<Property name="toolbox" value="GDW 2.0 Data Toolbox"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Job Flow Diagram" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Activity">
+						<Property name="alias" value="Job Flow"/>
+						<Property name="diagramID" value="GDW20JobFlow"/>
+						<Property name="pdata" value="HideParents=0;UseAlias=0;"/>
+						<Property name="toolbox" value="GDW 2.0 Job Toolbox"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+	</Content>
+</UMLProfile>

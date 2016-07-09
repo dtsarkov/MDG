@@ -1,0 +1,143 @@
+History
+-------------------------------------------------------------------------------
+0.07 
+-----
+	- Added data vault objects
+0.08 
+-----
+	- Added Simple TCF stream
+0.09 
+-----
+	- Added tags to "TCF Stream" component
+0.10
+-----
+	+ added "TCF Stream" component to "Data Toolbox"
+	+ set default values for "TCF Stream" tags
+	+ added "Data Flow" connector to "Data Toolbox"
+	+ added "Job connectors" section and "Job Flow" connector to "Job Toolbox". 
+	+ arranged components in "Job Toolbox"
+0.11
+-----
+	+ change "Data Flow" connect type to Dependency
+	# arrange "TCF Stream" component "TCF properties" by moving Stream ID to the top
+	+ arrange items in "Data Toolbox"
+	+ added "Staging table" to "Data Vault" page
+	+ arranged elements in "Data Vault" page
+0.12
+-----
+	+ remove "Staging Table" as there is already "Table" component.
+	+ create "Database" component and add it to "Data Toolbox"
+	+ add "UPI2" "Polling Type" to "Poll Job" stereotype
+	+ add "AS::Polling Exit Code" tag to "Poll Job" stereotype
+	+ add "AS::success_codes" to "BTEQ Job"
+	+ add "AS::success_codes" to "Poll Job"
+	+ create "Send Event" job
+	+ create "Send Event" connector for "Send Event" job
+	+ add "OR"/"AND" vertical sync elements to "Job Toolbox"
+0.13
+-----
+	+ change "database" element line width
+	+ add all Autosys event types to "AS Event Types" enumeration
+	+ add "OR"/"AND" horisontal sync elements to "Job Toolbox"
+0.14
+-----
+	+ Change "TCF Stream" model pattern (P_V_INP_..., P_V_OUT_... databases and 1 TCF Process)
+0.15
+-----
+	+ add Start Stream, End Stream, Polling Job to "TCF Stream" model pattern
+	+ add "View" component to "Data Toolbox"
+0.16
+-----
+	+ add input/output views 
+	+ add P_D_INP_... database and staging table
+	+ create TCF Process pattern
+	+ add "Pattern" section to "Data Toolbox"
+0.17
+-----
+	+ rename "Send Event Connector" to "send"
+0.18
+-----
+	+ add TCF Process pattern to "Pattern:Data Toolbox"
+	+ removed shape script from "Send Event" connector
+0.19
+-----
+	+ rename elements in TCF Stream 
+	+ create "call" connector
+0.20
+-----
+	+ add "SQL query" component to "Job Toolbox"
+	+ remove multiplicity from "call" connector
+0.21
+-----
+	- add "Replace Control ID" browser script
+0.22
+-----
+    	+ add "TD::User Name" tag to "Start Stream"/"End Stream" and "BTEQ JOb" jobs
+0.23
+-----
+	+ changes Box Job shape script 
+	+ Start Stream: create "Teradata" section and move "TD::User name" tag there 
+	+ End Stream: create "Teradata" section and move "TD::User name" tag there 
+	+ BTEQ Job: create "Teradata" section and move "TD::User name" tag there 
+	+ BTEQ Job: create "Autosys" section and move all "AS::..." tag there 
+	+ Poll Job: create "Teradata" section and move "TD::User name" tag there 
+	+ Poll Job: create "Autosys" section and move all "AS::..." tag there 
+
+0.24
+-----
+	+ TCF Job: create "Teradata" section and move "TD::User name" tag there 
+    	+ add icons to Box Job, BTEQ Job, Polling Job and TCF Process elements
+0.25
+-----
+    	+ add icon to Send Event Job element
+	- (removed H-AND and V-OR) vertical "AND" and horizontal "OR" sync elements don't work
+0.26
+-----
+
+0.27
+-----
+	+ adjust heights of all elements in "TCF Process" pattern
+	+ add tag "TCF::Delete Records" : "Y", "N" to "TCF Process" element
+	- uncheck "Data Flow" diagram "Show Additional Parents" and "Show Namespace" properties ("Show Namespace" does not exist in profile helper)
+0.28
+-----
+	+ BUG: "TCF Job" shape scripts shows "RQM" even if "None" is selected
+0.29
+-----
+	+ create "TCF Loop" element
+	+ add "TCF::Process Filter List" tag to "TCF Job" element
+
+0.30
+-----
+    	+ add "AS::Polling Offset" tag to "Polling Job" element
+	+ create "Diagram Keys" pattern
+	+ renamed "TCF Loop" tags: "TCF Pattern" to "TCF::Pattern", "TCF Process Names Pattern" to "TCF::Process Names", "Number of Threads" to "TCF::Number of Threads"
+	! manual sync is required; templates need to be modified
+0.31
+-----
+	+ modified data flow diagram keys
+	+ added "TCF::StreamByID" search query
+	+ added "BOX" label to "Box Job" shape and "LOOP" label to "TCF Loop Job" shape
+	+ changed "database" shape script
+ 	+ B:"Link", "Satellite" elements does not show default colors
+	+ removed scripts
+	+ show event type on "Send Event" connector
+	+ changed "TCF Loop" icon 
+0.32
+-----
+    	- changed "TCF Stream" shape script
+
+
+TO-DO List  (N - Nice to have, M - Must have, B - Bug)
+-------------------------------------------------------------------------------
+M	create "Wrapping View" element
+	change Jobs "_metatype" 
+	create "R Config Mapping" pattern
+	create "Measure Derivation" pattern
+	create "Detailed Design Specification" docment pattern and migrate corresponding document teamplates
+N	Change "AND"/"OR" elments border color (default border color does not work)
+N	Don't show stereotype on "Send Event" connector
+N	Set TCF process default name to "TX_ccc_ss_PROC_NAME"
+N	change "Data Flow" connector default line style to "Leteral - Horizontal"
+# 	Don't show attibutes and methods in "TCF Stream" element. Not required. It does not show attributes/menthod when created as Packaging componenet.
+??	add tag "TCF::Delta Action Code" to "TCF Process"
