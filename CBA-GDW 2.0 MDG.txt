@@ -125,11 +125,18 @@ History
 	+ changed "TCF Loop" icon 
 0.32
 -----
-    	- changed "TCF Stream" shape script
+    	+ changed "TCF Stream" shape script
+
+0.33
+-----
+	+ added new tag "TCF::MyService Support Group" and "AS::Project" to TCF Stream element
+	- created "CMD" job element
 
 
 TO-DO List  (N - Nice to have, M - Must have, B - Bug)
 -------------------------------------------------------------------------------
+M 	Create "Logical" & "Phisical" data model diagrams
+
 M	create "Wrapping View" element
 	change Jobs "_metatype" 
 	create "R Config Mapping" pattern

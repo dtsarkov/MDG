@@ -3,6 +3,26 @@
 	<Documentation id="98F2FC99-0" name="GDW 2.0" version="1.0" notes="GDW 2.0"/>
 	<Content>
 		<Stereotypes>
+			<Stereotype name="CMD Job" notes="" cx="100" cy="45" bgcolor="5921370" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_makeComposite" value="False"/>
+						<Property name="_PType" value="0"/>
+						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
+						<Property name="_tagGroups" value="Autosys"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="AS::command" type="" description="Specifies the command, executable, UNIX shell script, application, or batch file to run." unit="" values="" default=""/>
+					<Tag name="AS::failed_codes" type="" description="Defines which exit codes indicate job failure.  &#xA;By default any exit code other than 0 (zero) indicates job failure " unit="" values="" default=""/>
+					<Tag name="AS::success_codes" type="" description="Defines which exit codes indicate job success.  Default: 0" unit="" values="" default="0"/>
+				</TaggedValues>
+			</Stereotype>
 			<Stereotype name="TCF Loop" alias="TL_&lt;CID&gt;_NAME" metatype="TCF Loop" notes="" cx="200" cy="145" bgcolor="11723519" fontcolor="0" bordercolor="139" borderwidth="1" hideicon="0">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIANCFzEj2DJNmhAEAAMAFAAAHABEAc3RyLmRhdFVUDQAH4JFdV+CRXVfgkV1X
 vVNNS8NAFJxrBP9DsZcKBevXSTxIUTxIFS30WGI3poUmSrJVRPzvztvN5stUmhwkZPP2Zebt
@@ -44,8 +64,10 @@ AABzdHIuZGF0VVQFAAfgkV1XUEsFBgAAAAABAAEAPgAAALoBAAAAAA==</Image>
 			<Stereotype name="BTEQ Job" notes="" cx="100" cy="45" bgcolor="9342520" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
-						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="_makeComposite" value="False"/>
+						<Property name="_PType" value="0"/>
+						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
+						<Property name="_tagGroups" value="Autosys"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -71,8 +93,10 @@ W7rgZhmt/QNQSwECFwsUAAAACAAqhsxIJDSUBYIBAAC+BQAABwAJAAAAAAAAAAAAAIAAAAAA
 c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
-						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="_makeComposite" value="False"/>
+						<Property name="_PType" value="0"/>
+						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
+						<Property name="_tagGroups" value="Autosys"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -89,8 +113,10 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 			<Stereotype name="EndStream" notes="" cx="50" cy="45" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
-						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="_makeComposite" value="False"/>
+						<Property name="_PType" value="0"/>
+						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
+						<Property name="_tagGroups" value="Autosys"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -125,8 +151,10 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 			<Stereotype name="Poll Job" notes="The job will keep polling TCF/Mainframe Process completion by querying TCF Metadata/UTIL_UPI_ISAC table. " cx="100" cy="45" bgcolor="12632256" fontcolor="65535" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
-						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="_makeComposite" value="False"/>
+						<Property name="_PType" value="0"/>
+						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
+						<Property name="_tagGroups" value="Autosys"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -159,8 +187,10 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 			<Stereotype name="Send Event" notes="" cx="100" cy="45" bgcolor="13434828" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
-						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="_makeComposite" value="False"/>
+						<Property name="_PType" value="0"/>
+						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
+						<Property name="_tagGroups" value="Autosys"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -172,8 +202,10 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 			<Stereotype name="StartStream" notes="" cx="50" cy="45" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Autosys;AS::Polling Table List=Autosys;AS::Polling Stream ID=Autosys;AS::Polling Type=Autosys;AS::Polling Retries=Autosys;AS::Polling Interval=Autosys;AS::Polling Offset=Autosys;TD::User Name=Teradata;"/>
-						<Property name="_tagGroups" value="Autosys,Teradata"/>
+						<Property name="_makeComposite" value="False"/>
+						<Property name="_PType" value="0"/>
+						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
+						<Property name="_tagGroups" value="Autosys"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -225,8 +257,8 @@ AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
 					<Tag name="TCF::Process Filter List" type="" description="Comma separated list of additional TCF process names need to be included in the output view WHERE condition." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="TCF Stream" notes="" cx="150" cy="100" bgcolor="16777198" fontcolor="0" bordercolor="0" borderwidth="2" hideicon="0">
-				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAEyl20gbKZ1v4gIAAHgNAAAHABEAc3RyLmRhdFVUDQAHro9xV66PcVeuj3FX
+			<Stereotype name="TCF Stream" notes="" cx="150" cy="100" bgcolor="14804223" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAOBA3EgbKZ1v4gIAAHgNAAAHABEAc3RyLmRhdFVUDQAHRDByV0QwcldEMHJX
 zVbbbtNAEJ1XI/UfLPLQRKpEuPSBoCKgpYAoBTWu+lChyMROE5E4KHa4qOq/c2Yv9q69juxE
 XGR5vZczM7tnz+w6pSmF9I1i8mmB2owSuqU9ukcezdH+RUtaU0YBahJ1hPc+fUH/iiL0rNB6
 piwS9A6Fxwi1HwqdAbMGUqMe4EnRzhCB48VoZfA/R60Lb2yb4duzLDQ2w2iX+nRAD1H2N6Ik
@@ -240,8 +272,8 @@ p4LvIfGNGItd8+kdnQgvvnhNNs39kzlV7N0mb1Ud3GGE1c/r2Rxjny6hp/d498WMbC9F3T55
 XLcnP81OH+1Xf/+3W0zfvyZzUhmcM3M8YyDm4ubq0iPo6FBls73O7XLf3iNWgU/P8fK+yxMw
 RWuJ0QFxFrCdn1vW61Fnf0R8G6fIqCWwI/y1xXi+iji9iibtmVxjtHqe1HnsAF09XeqUWY2k
 lenyUsfUi5yT5oxwnktmR8R/MHy2pjvw4fb3d9nQ57/7lrW9s7o+gqWJUnmhq+YcvsI/Qaqy
-PxUKPQGGz2bb9/asNo2wK899p32VOc2wr/TfhfeeZSetZPkbUEsBAhcLFAAAAAgATKXbSBsp
-nW/iAgAAeA0AAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB66PcVdQSwUGAAAAAAEA
+PxUKPQGGz2bb9/asNo2wK899p32VOc2wr/TfhfeeZSetZPkbUEsBAhcLFAAAAAgA4EDcSBsp
+nW/iAgAAeA0AAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB0QwcldQSwUGAAAAAAEA
 AQA+AAAAGAMAAAAA</Image>
 				<AppliesTo>
 					<Apply type="PackagingComponent">
@@ -258,7 +290,7 @@ AQA+AAAAGAMAAAAA</Image>
 						<Property name="_OpPro" value="0"/>
 						<Property name="_OpPub" value="0"/>
 						<Property name="_Tag" value="0"/>
-						<Property name="_tagGroupings" value="TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;"/>
+						<Property name="_tagGroupings" value="TCF::MyService Support Group=TCF Properties;TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;"/>
 						<Property name="_tagGroups" value="TCF Properties,Autosys Properties"/>
 					</Apply>
 				</AppliesTo>
@@ -268,6 +300,7 @@ AQA+AAAAGAMAAAAA</Image>
 					<Tag name="AS::Prefix" type="" description="au_cba_&lt;System&gt;_p01_&lt;Source System&gt;_wd_&lt;Stream ID&gt;_&lt;Description&gt;" unit="" values="" default="au_cba_rbsbus_p01_SSS_wd_SID_DESCR"/>
 					<Tag name="AS::profile" type="" description="" unit="" values="" default="/cba_app/RBSBUS/PROD/"/>
 					<Tag name="AS::start_times" type="" description="" unit="" values="" default="23:00"/>
+					<Tag name="TCF::MyService Support Group" type="" description="" unit="" values="" default=""/>
 					<Tag name="TCF::Stream ID" type="" description="TCF Stream Key" unit="" values="" default=""/>
 					<Tag name="TCF::Business Date Offset" type="" description="" unit="" values="" default="0"/>
 				</TaggedValues>
