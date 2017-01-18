@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="528C7A95-8" name="GDW 2.0 Data Modeling" version="1.0" notes="GDW 2.0 Data Modeling"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Entities" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="GDW 2.0::Hub(UML::Table)" type="" description="" unit="" values="" default="Hub"/>
+					<Tag name="GDW 2.0::Link(UML::Table)" type="" description="" unit="" values="" default="Link"/>
+					<Tag name="GDW 2.0::Satellite(UML::Table)" type="" description="" unit="" values="" default="Satellite"/>
+					<Tag name="GDW 2.0::Fact Table(UML::Table)" type="" description="" unit="" values="" default="Fact Table"/>
+					<Tag name="GDW 2.0::Rerence Table(UML::Table)" type="" description="" unit="" values="" default="Reference Table"/>
+					<Tag name="UML::Table" type="" description="" unit="" values="" default="Table"/>
+					<Tag name="EAUML::view" type="" description="" unit="" values="" default="View"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Connectors" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="UML::Association" type="" description="" unit="" values="" default="Relationship"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Misc" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="CBAGDW20::Data Model Diagram Keys(UMLPatternSilent)" type="" description="" unit="" values="" default="Diagram Keys"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+	</Content>
+</UMLProfile>
