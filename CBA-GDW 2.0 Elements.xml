@@ -6,9 +6,7 @@
 			<Stereotype name="CMD Job" notes="" cx="100" cy="45" bgcolor="5921370" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_makeComposite" value="False"/>
-						<Property name="_PType" value="0"/>
-						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::command=Autosys;AS::failed_codes=Autosys;"/>
 						<Property name="_tagGroups" value="Autosys"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
@@ -22,6 +20,11 @@
 					<Tag name="AS::failed_codes" type="" description="Defines which exit codes indicate job failure.  &#xA;By default any exit code other than 0 (zero) indicates job failure " unit="" values="" default=""/>
 					<Tag name="AS::success_codes" type="" description="Defines which exit codes indicate job success.  Default: 0" unit="" values="" default="0"/>
 				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Fact Table" notes="" cx="90" cy="70" bgcolor="16769470" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Table"/>
+				</AppliesTo>
 			</Stereotype>
 			<Stereotype name="TCF Loop" alias="TL_&lt;CID&gt;_NAME" metatype="TCF Loop" notes="" cx="200" cy="145" bgcolor="11723519" fontcolor="0" bordercolor="139" borderwidth="1" hideicon="0">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIANCFzEj2DJNmhAEAAMAFAAAHABEAc3RyLmRhdFVUDQAH4JFdV+CRXVfgkV1X
@@ -64,10 +67,8 @@ AABzdHIuZGF0VVQFAAfgkV1XUEsFBgAAAAABAAEAPgAAALoBAAAAAA==</Image>
 			<Stereotype name="BTEQ Job" notes="" cx="100" cy="45" bgcolor="9342520" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_makeComposite" value="False"/>
-						<Property name="_PType" value="0"/>
-						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
-						<Property name="_tagGroups" value="Autosys"/>
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;TD::User Name=Database;"/>
+						<Property name="_tagGroups" value="Autosys,Database"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -95,8 +96,8 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 					<Apply type="Activity">
 						<Property name="_makeComposite" value="False"/>
 						<Property name="_PType" value="0"/>
-						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
-						<Property name="_tagGroups" value="Autosys"/>
+						<Property name="_tagGroupings" value="TD::User Name=Database;"/>
+						<Property name="_tagGroups" value="Database"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -115,8 +116,8 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 					<Apply type="Activity">
 						<Property name="_makeComposite" value="False"/>
 						<Property name="_PType" value="0"/>
-						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
-						<Property name="_tagGroups" value="Autosys"/>
+						<Property name="_tagGroupings" value="TD::User Name=Database;"/>
+						<Property name="_tagGroups" value="Database"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -151,10 +152,8 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 			<Stereotype name="Poll Job" notes="The job will keep polling TCF/Mainframe Process completion by querying TCF Metadata/UTIL_UPI_ISAC table. " cx="100" cy="45" bgcolor="12632256" fontcolor="65535" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_makeComposite" value="False"/>
-						<Property name="_PType" value="0"/>
-						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
-						<Property name="_tagGroups" value="Autosys"/>
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Process;AS::Polling Table List=Process;AS::Polling Stream ID=Process;AS::Polling Type=Process;AS::Polling Retries=Process;AS::Polling Interval=Process;AS::Polling Offset=Process;TD::User Name=Database;"/>
+						<Property name="_tagGroups" value="Autosys,Process,Database"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -164,7 +163,7 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="AS::Polling Offset" type="" description="Business Date offset (+/-). Default value is 0" unit="" values="" default=""/>
-					<Tag name="AS::Polling Type" type="enumeration" description="" unit="" values="TCF,UPI,UPI2" default="TCF"/>
+					<Tag name="AS::Polling Type" type="enumeration" description="" unit="" values="TCF,UPI,UPI2,ORA" default="TCF"/>
 					<Tag name="AS::Polling Stream ID" type="" description="Specify coma separated list of TCF Stream keys or MVS job names" unit="" values="" default=""/>
 					<Tag name="AS::Polling Table List" type="" description="Comma separated list of tables" unit="" values="" default=""/>
 					<Tag name="AS::Polling Interval" type="int" description="Time interval in minutes between attempts " unit="" values="" default=""/>
@@ -189,8 +188,8 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 					<Apply type="Activity">
 						<Property name="_makeComposite" value="False"/>
 						<Property name="_PType" value="0"/>
-						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
-						<Property name="_tagGroups" value="Autosys"/>
+						<Property name="_tagGroupings" value="TD::User Name=Database;"/>
+						<Property name="_tagGroups" value="Database"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -204,8 +203,8 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 					<Apply type="Activity">
 						<Property name="_makeComposite" value="False"/>
 						<Property name="_PType" value="0"/>
-						<Property name="_tagGroupings" value="AS::command=Autosys;AS::failed_codes=Autosys;AS::success_codes=Autosys;"/>
-						<Property name="_tagGroups" value="Autosys"/>
+						<Property name="_tagGroupings" value="TD::User Name=Database;"/>
+						<Property name="_tagGroups" value="Database"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -232,8 +231,8 @@ AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
 				<AppliesTo>
 					<Apply type="Activity">
 						<Property name="_Tag" value="0"/>
-						<Property name="_tagGroupings" value="TCF::Pattern=Properties;TCF::RQM Type=Properties;TCF::Delete Rows Added By Any Process=Properties;TCF::Key Columns=Properties;TCF::Process Filter=Flags;TCF::Truncate Target=Flags;TCF::Verification Flag=Flags;TCF::Collect Stats=Flags;TCF::Process Filter List=Flags;TCF::Business Temporality=Business Temporality;TCF::BT Key Columns=Business Temporality;TCF::BT Backdated data=Business Temporality;TD::User Name=Teradata;"/>
-						<Property name="_tagGroups" value="Properties,Flags,Business Temporality,Teradata"/>
+						<Property name="_tagGroupings" value="TCF::Pattern=Properties;TCF::RQM Type=Properties;TCF::Key Columns=Properties;TCF::Delete Rows Added By Any Process=Properties;TCF::Process Filter=Flags;TCF::Truncate Target=Flags;TCF::Verification Flag=Flags;TCF::Collect Stats=Flags;TCF::Process Filter List=Flags;TCF::Business Temporality=Business Temporality;TCF::BT Key Columns=Business Temporality;TCF::BT Backdated data=Business Temporality;TD::User Name=Teradata;TCF::Effective Date=Process;TCF::Expiry Date=Process;"/>
+						<Property name="_tagGroups" value="Properties,Flags,Business Temporality,Teradata,Process"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
 						<Property name="parameterName" value=""/>
@@ -245,6 +244,8 @@ AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
 					<Tag name="TCF::Business Temporality" type="enumeration" description="" unit="" values="0,1" default="0"/>
 					<Tag name="TCF::Collect Stats" type="enumeration" description="" unit="" values="0,1" default="0"/>
 					<Tag name="TCF::Delete Rows Added By Any Process" type="enumeration" description="" unit="" values="Y,N" default="N"/>
+					<Tag name="TCF::Effective Date" type="" description="TCF Process Effective date is used in &quot;TCF Loop&quot; to determine whether process can be executed on a given TCF Business date or not." unit="" values="" default=""/>
+					<Tag name="TCF::Expiry Date" type="" description="TCF Process Expiry date is used in &quot;TCF Loop&quot; to determine whether process can be executed on a given TCF Business date or not." unit="" values="" default=""/>
 					<Tag name="TCF::Key Columns" type="" description="" unit="" values="" default=""/>
 					<Tag name="TCF::Pattern" type="enumeration" description="" unit="" values="Insert Append,Delta Apply,Full Apply" default="Insert Append"/>
 					<Tag name="TCF::Process Filter" type="enumeration" description="" unit="" values="0,1" default="0"/>

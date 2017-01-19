@@ -129,17 +129,28 @@ History
 
 0.33
 -----
-	+ added new tag "TCF::MyService Support Group" and "AS::Project" to TCF Stream element
-	- created "CMD" job element
+	+ added new tag "TCF::MyService Support Group" to TCF Stream element
+	+ created "CMD Job" element
 
+0.34
+-----
+	+ added "Physical data model" and "Logica data model" diagrams
+	+ added "Oracle" type to "Poll Job"
+	+ added tags "TCF::Effective Date" and "TCF::Expiry date" to the "TCF Job" element.
+	+ added Fact Table element
+	+ modified "KEYS" for data model diagrams
+
+0.35
+-----
+	add System element
+	add Role element
+	add "R Config Mapping" pattern/element
+	create "Data Model" pattern
 
 TO-DO List  (N - Nice to have, M - Must have, B - Bug)
 -------------------------------------------------------------------------------
-M 	Create "Logical" & "Phisical" data model diagrams
-
-M	create "Wrapping View" element
+	create "Wrapping View" element
 	change Jobs "_metatype" 
-	create "R Config Mapping" pattern
 	create "Measure Derivation" pattern
 	create "Detailed Design Specification" docment pattern and migrate corresponding document teamplates
 N	Change "AND"/"OR" elments border color (default border color does not work)

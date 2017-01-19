@@ -3,6 +3,28 @@
 	<Documentation id="DADF1455-E" name="GDW 2.0 Diagrams" version="1.0" notes="GDW 2.0 Diagrams"/>
 	<Content>
 		<Stereotypes>
+			<Stereotype name="Logical Data Model" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Component">
+						<Property name="alias" value="LogicalDataModel"/>
+						<Property name="diagramID" value="GDW20LDM"/>
+						<Property name="pdata" value="UseAlias=1;HideParents=1;HideOps=1;HideAtts=0;HideEStereo=1;HideStereo=0;"/>
+						<Property name="styleex" value="TConnectorNotation=Information Engineering;VisibleAttributeDetail=1;SuppConnectorLabels=1;"/>
+						<Property name="toolbox" value="GDW 2.0 Data Modeling"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Physical Data Model" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Component">
+						<Property name="alias" value="PhysicalDataModel"/>
+						<Property name="diagramID" value="GDW20PDM"/>
+						<Property name="pdata" value="HideParents=1;UseAlias=0;HideStereo=1;SuppCN=0;"/>
+						<Property name="styleex" value="VisibleAttributeDetail=0;HideConnStereotype=1;AdvancedConnectorProps=0;TConnectorNotation=Information Engineering;TExplicitNavigability=0;"/>
+						<Property name="toolbox" value="GDW 2.0 Data Modeling"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
 			<Stereotype name="Data Flow Diagram" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Diagram_Component">
