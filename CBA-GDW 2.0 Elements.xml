@@ -152,7 +152,7 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 			<Stereotype name="Poll Job" notes="The job will keep polling TCF/Mainframe Process completion by querying TCF Metadata/UTIL_UPI_ISAC table. " cx="100" cy="45" bgcolor="12632256" fontcolor="65535" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Activity">
-						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Exit Code=Process;AS::Polling Table List=Process;AS::Polling Stream ID=Process;AS::Polling Type=Process;AS::Polling Retries=Process;AS::Polling Interval=Process;AS::Polling Offset=Process;TD::User Name=Database;"/>
+						<Property name="_tagGroupings" value="AS::success_codes=Autosys;AS::Polling Days=Process;AS::Polling Exit Code=Process;AS::Polling Table List=Process;AS::Polling Stream ID=Process;AS::Polling Type=Process;AS::Polling Retries=Process;AS::Polling Interval=Process;AS::Polling Offset=Process;TD::User Name=Database;"/>
 						<Property name="_tagGroups" value="Autosys,Process,Database"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
@@ -171,6 +171,7 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 					<Tag name="AS::Polling Retries" type="int" description="Number of attempts" unit="" values="" default=""/>
 					<Tag name="AS::Polling Exit Code" type="" description="Exit code job returns when it exceeds number of attempts (default 1) " unit="" values="" default=""/>
 					<Tag name="AS::success_codes" type="" description="Comma separated list of exit codes treated as success" unit="" values="" default=""/>
+					<Tag name="AS::Polling Days" type="enumeration" description="" unit="" values="All,Work Days" default="All"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Rerence Table" notes="" cx="90" cy="70" bgcolor="16053462" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
@@ -291,7 +292,7 @@ AQA+AAAAGAMAAAAA</Image>
 						<Property name="_OpPro" value="0"/>
 						<Property name="_OpPub" value="0"/>
 						<Property name="_Tag" value="0"/>
-						<Property name="_tagGroupings" value="TCF::MyService Support Group=TCF Properties;TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;"/>
+						<Property name="_tagGroupings" value="TCF::MyService Support Group=TCF Properties;TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;TCF::Catch up mode=TCF Properties;AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;"/>
 						<Property name="_tagGroups" value="TCF Properties,Autosys Properties"/>
 					</Apply>
 				</AppliesTo>
@@ -304,6 +305,7 @@ AQA+AAAAGAMAAAAA</Image>
 					<Tag name="TCF::MyService Support Group" type="" description="" unit="" values="" default=""/>
 					<Tag name="TCF::Stream ID" type="" description="TCF Stream Key" unit="" values="" default=""/>
 					<Tag name="TCF::Business Date Offset" type="" description="" unit="" values="" default="0"/>
+					<Tag name="TCF::Catch up mode" type="enumeration" description="If enabled TCF stream will be executed in a loop till TCF business date equal or greater current date" unit="" values="Enabled,Disabled" default="Enabled"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="View" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="EAUML::view" baseStereotypes="EAUML::view">

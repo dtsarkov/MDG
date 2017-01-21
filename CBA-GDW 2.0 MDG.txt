@@ -142,10 +142,13 @@ History
 
 0.35
 -----
+	+ add new tag "AS::Polling Days" (All, Work Days) to "Poll Job" element
+	+ add new tag "TCF::Catch up mode" (Enabled/Disabled) to "TCF Stream" element
+	+ create "Data Model" pattern
+
 	add System element
 	add Role element
 	add "R Config Mapping" pattern/element
-	create "Data Model" pattern
 
 TO-DO List  (N - Nice to have, M - Must have, B - Bug)
 -------------------------------------------------------------------------------
