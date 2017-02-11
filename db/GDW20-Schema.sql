@@ -15,7 +15,7 @@ SELECT	 OperationID
 		,Name			as IndexName
 		,Style			as IndexType
 FROM t_operation
-WHERE	stereotype = 'index'
+WHERE	stereotype in ('index','PK')
 and		style IN ('NUPI','UPI','NUSI','USI')
 
 UNION ALL

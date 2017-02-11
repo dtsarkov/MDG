@@ -146,6 +146,13 @@ History
 	+ add new tag "TCF::Catch up mode" (Enabled/Disabled) to "TCF Stream" element
 	+ create "Data Model" pattern
 
+0.36
+-----
+	+ created "OCDB Stream" element with OCDB::Stream ID and all AS::... tags
+	+ created "OCDB Job" element
+	+ changed "TCF Stream" and "OCDB Stream" elements shape scripts  
+		
+	
 	add System element
 	add Role element
 	add "R Config Mapping" pattern/element

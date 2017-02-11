@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<MDG.Technology version="1.0"><Documentation id="CBAGDW20" name="CBA GDW 2.0" version="0.35" notes="A set of custom elemnts, connectors and toolboxes to streamline GDW 2.0 design activities."/><UMLProfiles><UMLProfile profiletype="uml2">
+<MDG.Technology version="1.0"><Documentation id="CBAGDW20" name="CBA GDW 2.0" version="0.36" notes="A set of custom elemnts, connectors and toolboxes to streamline GDW 2.0 design activities."/><UMLProfiles><UMLProfile profiletype="uml2">
 			<Documentation id="98F2FC99-0" name="GDW 2.0" version="1.0" notes="GDW 2.0"/>
 			<Content>
 				<Stereotypes>
@@ -25,6 +25,30 @@
 						<AppliesTo>
 							<Apply type="Table"/>
 						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="OCDB Job" metatype="OCDB Job" notes="" cx="105" cy="45" bgcolor="10198015" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
+						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAJ5US0rmObjh1gAAAKACAAAHABEAc3RyLmRhdFVUDQAHL+meWC/pnlgv6Z5Y
+tVJNC4JQEJyrQf9BPBlE3etUieSlOtQpOgjZB5iIvooI/3vz1pSUijzEsu9jd2Z2HrwUB/iI
+EcDEiacjIp7uaKMFA1skrF1Z86HYuxCXlgwbHQwFmaP7jIUgFbsJWemzE/OmlRU5FnqcoGPN
+tEoNg4gdKzZzSpUUS657YcwxgYMxBozqBAtdUfFkmq4p3kecqB1GfIGeYEoWr6r78Yh/9ZER
+GyAUPbN01dyTIyqKvcJRiNsPfpw/+XFxpkrY0I371c0n1gqzGivf3/0HExvxV/1Nes3wAFBL
+AQIXCxQAAAAIAJ5US0rmObjh1gAAAKACAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQF
+AAcv6Z5YUEsFBgAAAAABAAEAPgAAAAwBAAAAAA==</Image>
+						<AppliesTo>
+							<Apply type="Activity">
+								<Property name="_tagGroupings" value="TD::User Name=Database;OCDB::Pattern=OCDB Properties;"/>
+								<Property name="_tagGroups" value="Database,OCDB Properties"/>
+								<Property name="isReadOnly" value="false"/>
+								<Property name="isSingleExecution" value=""/>
+								<Property name="parameterName" value=""/>
+								<Property name="postcondition" value=""/>
+								<Property name="precondition" value=""/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="OCDB::Pattern" type="enumeration" description="" unit="" values="Delta Apply,Full Apply" default="Delta Apply"/>
+							<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
+						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="TCF Loop" alias="TL_&lt;CID&gt;_NAME" metatype="TCF Loop" notes="" cx="200" cy="145" bgcolor="11723519" fontcolor="0" bordercolor="139" borderwidth="1" hideicon="0">
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIANCFzEj2DJNmhAEAAMAFAAAHABEAc3RyLmRhdFVUDQAH4JFdV+CRXVfgkV1X
@@ -232,7 +256,7 @@ AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Activity">
 								<Property name="_Tag" value="0"/>
-								<Property name="_tagGroupings" value="TCF::Pattern=Properties;TCF::RQM Type=Properties;TCF::Key Columns=Properties;TCF::Delete Rows Added By Any Process=Properties;TCF::Process Filter=Flags;TCF::Truncate Target=Flags;TCF::Verification Flag=Flags;TCF::Collect Stats=Flags;TCF::Process Filter List=Flags;TCF::Business Temporality=Business Temporality;TCF::BT Key Columns=Business Temporality;TCF::BT Backdated data=Business Temporality;TD::User Name=Teradata;TCF::Effective Date=Process;TCF::Expiry Date=Process;"/>
+								<Property name="_tagGroupings" value="TCF::Pattern=Properties;TCF::RQM Type=Properties;TCF::Key Columns=Properties;TCF::Delete Rows Added By Any Process=Properties;TCF::Truncate Target=Flags;TCF::Verification Flag=Flags;TCF::Collect Stats=Flags;TCF::Process Filter=Flags;TCF::Process Filter List=Flags;TCF::Business Temporality=Business Temporality;TCF::BT Backdated data=Business Temporality;TCF::BT Key Columns=Business Temporality;TD::User Name=Teradata;TCF::Expiry Date=Process;TCF::Effective Date=Process;"/>
 								<Property name="_tagGroups" value="Properties,Flags,Business Temporality,Teradata,Process"/>
 								<Property name="isReadOnly" value="false"/>
 								<Property name="isSingleExecution" value=""/>
@@ -259,24 +283,58 @@ AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
 							<Tag name="TCF::Process Filter List" type="" description="Comma separated list of additional TCF process names need to be included in the output view WHERE condition." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="TCF Stream" notes="" cx="150" cy="100" bgcolor="14804223" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
-						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAOBA3EgbKZ1v4gIAAHgNAAAHABEAc3RyLmRhdFVUDQAHRDByV0QwcldEMHJX
-zVbbbtNAEJ1XI/UfLPLQRKpEuPSBoCKgpYAoBTWu+lChyMROE5E4KHa4qOq/c2Yv9q69juxE
-XGR5vZczM7tnz+w6pSmF9I1i8mmB2owSuqU9ukcezdH+RUtaU0YBahJ1hPc+fUH/iiL0rNB6
-piwS9A6Fxwi1HwqdAbMGUqMe4EnRzhCB48VoZfA/R60Lb2yb4duzLDQ2w2iX+nRAD1H2N6Ik
-og3SRF1gdIzxELgbNTuJ0R6rnnnlEdazBkOpwS2vK0NEXnOM+gHec2uNbku2Y64j8COtjuk1
-LAOUF4Z9sa6jf/bIOZirLlbs56raRlceMCv0TUQ/1yJ6i3KGfZnCi7Q+xE4UFu1VJm3Ye7td
-19ZDEe0TyoSuEDNCayq0Zcb4gLjfgQlqdezRmZqxxLijun09beSpjKrXHjPGdam9qxJfbjup
-9nO0FmgdI/IC/SGYzURPIniv1zJ71l/T62aPpsI8YoWw9kLMjPfwFK0YtShXWqK8mSrzwOaI
-XgrF3AChsWMVo6xKD7Nrh99NYTIPeEdZ1YnguZPz0ilx6EJfAxVgxm9ogHKIcgDFytya0U+M
-fi55uXPuhdaFzTqvrkmmPiYzU/8869U5FfnpK/snOD/KO9X2/PCAnBDr3xdcpeA6xBwZH0C3
-p4LvIfGNGItd8+kdnQgvvnhNNs39kzlV7N0mb1Ud3GGE1c/r2Rxjny6hp/d498WMbC9F3T55
-XLcnP81OH+1Xf/+3W0zfvyZzUhmcM3M8YyDm4ubq0iPo6FBls73O7XLf3iNWgU/P8fK+yxMw
-RWuJ0QFxFrCdn1vW61Fnf0R8G6fIqCWwI/y1xXi+iji9iibtmVxjtHqe1HnsAF09XeqUWY2k
-lenyUsfUi5yT5oxwnktmR8R/MHy2pjvw4fb3d9nQ57/7lrW9s7o+gqWJUnmhq+YcvsI/Qaqy
-PxUKPQGGz2bb9/asNo2wK899p32VOc2wr/TfhfeeZSetZPkbUEsBAhcLFAAAAAgA4EDcSBsp
-nW/iAgAAeA0AAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB0QwcldQSwUGAAAAAAEA
-AQA+AAAAGAMAAAAA</Image>
+					<Stereotype name="OCDB Stream" alias="Oracle Cache DB Stream" metatype="OCDB Stream" notes="" cx="150" cy="100" bgcolor="10198015" fontcolor="16777215" bordercolor="6710886" borderwidth="1" hideicon="0">
+						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIABJcS0oDgZ9xAwMAAGINAAAHABEAc3RyLmRhdFVUDQAHafaeWGn2nlhp9p5Y
+zVZdb9NAENxXI/EfrOSBtEJqK+CB0CLSlgISbVETVCGEohA7SUXiotgBIdT/zuyeL/dhO3Ea
+IZBl+86enT3Pzt05pQkN6DvFFNIMrRtK6Dc9pAcU0BT9X3RLC8qoh5ZCHeFs0Fc8n1OEJ3P0
+XuQRezgSvOkKa4TWzzwiA24BtEIqdIp+RiPknOIYAj0V1haN5c1HQczpLEecWIgdHDprV9Af
+cE0czBuH5dga8WqmM7xJcLdR/oiKCJtHXa+AHQI1AHYMXAzUPj2W8wBXczeRrFqELAsonFq1
+aUHlDDpkwtNAZIMucK6L5DiuVYT6qagTeo3IHq5XVryp39E/O7QrzFebLw6XrryPLwNg5ng2
+kufciugtrjeoywQsKvoZKmEiWAvl0KnMihi9DNlUHRvi7sypgIph9s2qrqNtH18jZ4TeBNEH
+To5z5P0BTA93xex7KKD3+YgVpjxrOdfzWkw+qtp7rBi3lfeuPb3K45TbL9CbocdzbIbnAyib
+yROeeau8zMz6brOuZrQdFhA7hL03wMi4hrwGxWhFS6clOZvtsgBq9qkjjhkDobHDPIfvygCj
+2wy/ncPUPOCKsqsT0bkpvuZMsTha1avp6VkeqRUtonXrrrQSOourOX9bnXn6hOx5+vc1L47J
+zM4wj3+K1cOv06arRwDkiNj9oWiVwtkDjJHxl3DtKfawNo4u8W4ai/YhvcNz5gnltPW0a6bm
+VBOMHeyL7TV8xXre4Q37n79pdZZHdCgcL9HiMbkspu2uPdq37rpSd/3RvPr+v+1jege2lTOq
+cWVC6BVKJdSqlKLH/xhtYm/yt4bLyGqXdMDAFY2Id8gUPr8Fto+/sBjHN8nD/yluBd2RfMZb
+45N1jE2gv3huqfZKMdMhnNKhT/L1RZ4qrV4tVamvCc8/pW2f+L+C1610C0XK+bbXo4fZc44d
+ra4iejUu3//2aNfLwryXUGuUr0/GYfW1PMaOneYzMxWvngLDa6fLfX9162bYVu/90vhqlcN8
+JrTAvuPF7UJt1VYM6voHUEsBAhcLFAAAAAgAElxLSgOBn3EDAwAAYg0AAAcACQAAAAAAAAAA
+AACAAAAAAHN0ci5kYXRVVAUAB2n2nlhQSwUGAAAAAAEAAQA+AAAAOQMAAAAA</Image>
+						<AppliesTo>
+							<Apply type="PackagingComponent">
+								<Property name="_tagGroupings" value="AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;OCDB::MyService Support Group=OCDB Properties;OCDB::Stream ID=OCDB Properties;"/>
+								<Property name="_tagGroups" value="Autosys Properties,OCDB Properties"/>
+							</Apply>
+						</AppliesTo>
+						<TaggedValues>
+							<Tag name="AS::days_of_week" type="" description="" unit="" values="" default="All"/>
+							<Tag name="AS::machine" type="" description="" unit="" values="" default="au_cba_bidseng_91_buh"/>
+							<Tag name="AS::Prefix" type="" description="au_cba_&lt;System&gt;_p01_&lt;Source System&gt;_wd_&lt;Stream ID&gt;_&lt;Description&gt;" unit="" values="" default="au_cba_gdw2ext_p01_balext_&lt;wd&gt;_&lt;SID&gt;"/>
+							<Tag name="AS::profile" type="" description="" unit="" values="" default="/cba_app/GDW2EXT/PROD/"/>
+							<Tag name="AS::start_times" type="" description="" unit="" values="" default="23:00"/>
+							<Tag name="OCDB::MyService Support Group" type="" description="" unit="" values="" default=""/>
+							<Tag name="OCDB::Stream ID" type="" description="TCF Stream Key" unit="" values="" default=""/>
+						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="TCF Stream" metatype="TCF Stream" notes="" cx="150" cy="100" bgcolor="12377081" fontcolor="139" bordercolor="139" borderwidth="1" hideicon="0">
+						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIADBcS0paxYEP/QIAAFQNAAAHABEAc3RyLmRhdFVUDQAHlPaeWJT2nliU9p5Y
+zVbRbtNAENxXI/EPVvJAKiHRCnggtIi0JYBEC2qCKoRQFGInqUhcFDsghPrvzO76cne2kzqN
+EMiyfWfPzp5n5+6c0pSG9J1iCmmO1hUl9Jvu0z0KaIb+L7qmJWXUR0tRRzgb9BXPFxThyQK9
+53nEIxwJ3vSENULrZx6RAbcEWpGK1muKpxmNkXmGY4SYmXC3aCJvPgpiQd0cceIg9nCY3D1B
+f8A18TCvPZZjZ9ybmbp4k+DuooojKiNcHr1eADsCagjsBLgYqH16KOcBrvZuI1m7CFmW0Dl1
+KtSC1hl0yISngcgGneO8LZLjuGIRqqhRJ/QKkX1cL5x4W8Wjf3YYV9ivtl8crrx5F3cGwCzw
+bCzPuRXRG1yvUJcpWDT6KSphI1gLdehM5kaMXoZsWseGeDzzKqAxzL5d1U206+NL5IzQmyL6
+wMtxhrw/gOnjrsxFDwX0Lh+xYqqzVnM9q8VURK33HivGbfXeZUGv6jh1+zl6c/R4js3xfAhl
+M3nCM2+Tl5nZ3F3WzYyuwwJih7D3hhgZ15DXoBitaOW0JGdzXRZAzQF1xDETIAx2lOcoujLA
+6LbD7+YwnQdcUXZ1Ijo3xdecKRZHa72aBT2rI42iZbRp3VRWwmTxNedvqzNPH5M7T/++5uUx
+2dkZ5vFPsHoU67Tt6hEAOSZ2fyhapXD2EGNkfB+u7VIbR494R41F+ZDe0qmwhHK6aroV0xnV
+BEsHu2J7I1u5ljd4w97n79mc4wEdCscLtHhEPott++uO8ay/ptRdewyvuf9ve5jZfV3lrGpc
+lxB6hVIJXZFS9Pj/ok3sS/7WcBW53iEdMHBFI+LdMYXHr4Ed4D8sxvFN8vA/il9BfySf8da6
+5DbGJtBfCm5Z75VypkM4pUOf5OvLPOu0erlSpb4mPPdU2wHxPwWvWekOilTz7a5HH7PnDLtZ
+XUXMSly99/kZmPM9lBrn65J1V30dj7FTp/msTMWnp8Dwmulz313Zuhl21Xq/Mr6snFE4zGdB
+C+x7XpxG6fUPUEsBAhcLFAAAAAgAMFxLSlrFgQ/9AgAAVA0AAAcACQAAAAAAAAAAAACAAAAA
+AHN0ci5kYXRVVAUAB5T2nlhQSwUGAAAAAAEAAQA+AAAAMwMAAAAA</Image>
 						<AppliesTo>
 							<Apply type="PackagingComponent">
 								<Property name="_AttInh" value="0"/>
@@ -292,7 +350,7 @@ AQA+AAAAGAMAAAAA</Image>
 								<Property name="_OpPro" value="0"/>
 								<Property name="_OpPub" value="0"/>
 								<Property name="_Tag" value="0"/>
-								<Property name="_tagGroupings" value="TCF::MyService Support Group=TCF Properties;TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;TCF::Catch up mode=TCF Properties;AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;"/>
+								<Property name="_tagGroupings" value="TCF::Catch up mode=TCF Properties;TCF::MyService Support Group=TCF Properties;TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;"/>
 								<Property name="_tagGroups" value="TCF Properties,Autosys Properties"/>
 							</Apply>
 						</AppliesTo>
@@ -2285,8 +2343,10 @@ AAD/////RgAAABwAAAAQAAAARU1GKwJAAAAMAAAAAAAAAA4AAAAUAAAAAAAAABAAAAAUAAAA
 							<Tag name="UML::Table" type="" description="" unit="" values="" default="Table"/>
 							<Tag name="EAUML::view" type="" description="" unit="" values="" default="View"/>
 							<Tag name="GDW 2.0::TCF Job(UML::Activity)" type="" description="" unit="" values="" default="TCF Process"/>
-							<Tag name="GDW 2.0::TCF Stream(UML::PackagingComponent)" type="" description="" unit="" values="" default="TCF Stream"/>
+							<Tag name="GDW 2.0::OCDB Job(UML::Activity)" type="" description="" unit="" values="" default="OCDB Process"/>
 							<Tag name="GDW 2.0::database(UML::Package)" type="" description="" unit="" values="" default="Database"/>
+							<Tag name="GDW 2.0::TCF Stream(UML::PackagingComponent)" type="" description="" unit="" values="" default="TCF Stream"/>
+							<Tag name="GDW 2.0::OCDB Stream(UML::PackagingComponent)" type="" description="" unit="" values="" default="OCDB Stream"/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="Data Connectors" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -2308,6 +2368,36 @@ AAD/////RgAAABwAAAAQAAAARU1GKwJAAAAMAAAAAAAAAA4AAAAUAAAAAAAAABAAAAAUAAAA
 							<Tag name="GDW 2.0::Fact Table(UML::Table)" type="" description="" unit="" values="" default="Fact Table"/>
 							<Tag name="GDW 2.0::Rerence Table(UML::Table)" type="" description="" unit="" values="" default="Reference Table"/>
 						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="GDW 2.0::OCDB Job(UML::Activity)" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAA
+AAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAMDAwADA3MAA8MqmAAAgQAAAIGAAACCAAAAg
+oAAAIMAAACDgAABAAAAAQCAAAEBAAABAYAAAQIAAAECgAABAwAAAQOAAAGAAAABgIAAAYEAA
+AGBgAABggAAAYKAAAGDAAABg4AAAgAAAAIAgAACAQAAAgGAAAICAAACAoAAAgMAAAIDgAACg
+AAAAoCAAAKBAAACgYAAAoIAAAKCgAACgwAAAoOAAAMAAAADAIAAAwEAAAMBgAADAgAAAwKAA
+AMDAAADA4AAA4AAAAOAgAADgQAAA4GAAAOCAAADgoAAA4MAAAODgAEAAAABAACAAQABAAEAA
+YABAAIAAQACgAEAAwABAAOAAQCAAAEAgIABAIEAAQCBgAEAggABAIKAAQCDAAEAg4ABAQAAA
+QEAgAEBAQABAQGAAQECAAEBAoABAQMAAQEDgAEBgAABAYCAAQGBAAEBgYABAYIAAQGCgAEBg
+wABAYOAAQIAAAECAIABAgEAAQIBgAECAgABAgKAAQIDAAECA4ABAoAAAQKAgAECgQABAoGAA
+QKCAAECgoABAoMAAQKDgAEDAAABAwCAAQMBAAEDAYABAwIAAQMCgAEDAwABAwOAAQOAAAEDg
+IABA4EAAQOBgAEDggABA4KAAQODAAEDg4ACAAAAAgAAgAIAAQACAAGAAgACAAIAAoACAAMAA
+gADgAIAgAACAICAAgCBAAIAgYACAIIAAgCCgAIAgwACAIOAAgEAAAIBAIACAQEAAgEBgAIBA
+gACAQKAAgEDAAIBA4ACAYAAAgGAgAIBgQACAYGAAgGCAAIBgoACAYMAAgGDgAICAAACAgCAA
+gIBAAICAYACAgIAAgICgAICAwACAgOAAgKAAAICgIACAoEAAgKBgAICggACAoKAAgKDAAICg
+4ACAwAAAgMAgAIDAQACAwGAAgMCAAIDAoACAwMAAgMDgAIDgAACA4CAAgOBAAIDgYACA4IAA
+gOCgAIDgwACA4OAAwAAAAMAAIADAAEAAwABgAMAAgADAAKAAwADAAMAA4ADAIAAAwCAgAMAg
+QADAIGAAwCCAAMAgoADAIMAAwCDgAMBAAADAQCAAwEBAAMBAYADAQIAAwECgAMBAwADAQOAA
+wGAAAMBgIADAYEAAwGBgAMBggADAYKAAwGDAAMBg4ADAgAAAwIAgAMCAQADAgGAAwICAAMCA
+oADAgMAAwIDgAMCgAADAoCAAwKBAAMCgYADAoIAAwKCgAMCgwADAoOAAwMAAAMDAIADAwEAA
+wMBgAMDAgADAwKAA8Pv/AKSgoACAgIAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAcH
+BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcBAQEBAQEB
+AQEBAQEBAQcBr6+vr6+vr6+vr6+vr68BAa+v/6+v/6//r/+v/6+vAQGv/6//r/+v/6//r/+v
+rwEBr/+v/6///6+v////r68BAa//r/+v/6//r/+v/6+vAQGv/6//r/+v/6//r/+vrwEBr6//
+r6///6+vr///r68BAa+vr6+vr6+vr6+vr6+vAQcBAQEBAQEBAQEBAQEBAQcHBwcHBwcHBwcH
+BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=</Icon>
+						<AppliesTo>
+							<Apply type="ToolboxItemImage"/>
+						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="GDW 2.0::TCF Job(UML::Activity)" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAA
@@ -2372,36 +2462,52 @@ jo44jo44jo44jo44jo44jo44jo44jo44jo44jo44jo44Hea1wMDAHea1Hea1Hea1Hea1Hea1
 Hea1Hea1Hea1Hea1Hea1Hea1Hea1Hea1Hea1wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
+UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
+aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
+cwA9ADsAUwBhAHYAZQBUAGEAZwA9ADUANwA1ADIAMgA0ADcANgA7AAAAeAB4ACMAOwAA
 AA==</Icon>
 						<AppliesTo>
 							<Apply type="ToolboxItemImage"/>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="GDW 2.0::Box Job(UML::Activity)" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
+						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk1mBwAAAAAAADYAAAAoAAAAHgAAABQAAAABABgAAAAAADAHAAAAAAAAAAAAAAAAAAAAAAAA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAAAAAwMDAAAAAwMDA
-AAAAwMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAAAAAAAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAAADAwMDAwMDAwMDAwMDAwMAA
+8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A8v8A
+8v8A8v/AwMDAwMDAwMDAwMDAwMAAAMDAwMDAwMDAwADy/wDy/4CAQICAQICAQICAQICAQICA
+QICAQICAQICAQICAQICAQICAQICAQICAQICAQICAQICAQICAQICAQICAQADy/wDy/8DAwMDA
+wMDAwAAAwMDAwMDAAPL/gIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBA
+gIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBAAPL/wMDAwMDAwMDAAADAwMDAwMAA8v+A
+gECAgEAA8v8A8v8A8v8A8v8A8v+AgECAgECAgECAgEAA8v+AgECAgECAgECAgEAA8v8A8v8A
+8v8A8v+AgECAgECAgECAgEAA8v/AwMDAwMAAAMDAwMDAwADy/4CAQICAQADy/4CAQICAQICA
+QICAQICAQICAQICAQICAQADy/4CAQICAQICAQICAQADy/4CAQICAQADy/4CAQICAQICAQICA
+QADy/8DAwMDAwAAAwMDAwMDAAPL/gIBAgIBAAPL/gIBAgIBAgIBAgIBAgIBAgIBAgIBAgIBA
+APL/gIBAgIBAgIBAgIBAAPL/gIBAgIBAgIBAgIBAgIBAgIBAgIBAAPL/wMDAwMDAAADAwMDA
+wMAA8v+AgECAgEAA8v+AgECAgECAgECAgECAgECAgECAgECAgEAA8v+AgECAgECAgECAgEAA
+8v+AgECAgECAgECAgECAgECAgECAgEAA8v/AwMDAwMAAAMDAwMDAwADy/4CAQICAQADy/4CA
+QICAQICAQICAQICAQICAQICAQICAQADy/4CAQICAQICAQICAQADy/4CAQICAQICAQICAQICA
+QICAQICAQADy/8DAwMDAwAAAwMDAwMDAAPL/gIBAgIBAAPL/APL/APL/gIBAgIBAgIBAgIBA
+gIBAgIBAAPL/gIBAgIBAgIBAgIBAAPL/gIBAgIBAgIBAgIBAgIBAgIBAgIBAAPL/wMDAwMDA
+AADAwMDAwMAA8v+AgECAgEAA8v+AgECAgECAgECAgECAgECAgECAgECAgEAA8v+AgECAgECA
+gECAgEAA8v+AgECAgECAgECAgECAgECAgECAgEAA8v/AwMDAwMAAAMDAwMDAwADy/4CAQICA
+QADy/4CAQICAQICAQICAQICAQICAQICAQICAQADy/4CAQICAQICAQICAQADy/4CAQICAQICA
+QICAQICAQICAQICAQADy/8DAwMDAwAAAwMDAwMDAAPL/gIBAgIBAAPL/gIBAgIBAgIBAgIBA
+gIBAgIBAgIBAgIBAAPL/gIBAgIBAgIBAgIBAAPL/gIBAgIBAgIBAgIBAgIBAgIBAgIBAAPL/
+wMDAwMDAAADAwMDAwMAA8v+AgECAgEAA8v+AgECAgECAgECAgECAgECAgECAgECAgEAA8v+A
+gECAgECAgECAgEAA8v+AgECAgECAgECAgECAgECAgECAgEAA8v/AwMDAwMAAAMDAwMDAwADy
+/4CAQICAQADy/4CAQICAQICAQICAQICAQICAQICAQICAQADy/4CAQICAQICAQICAQADy/4CA
+QICAQICAQICAQICAQICAQICAQADy/8DAwMDAwAAAwMDAwMDAAPL/gIBAgIBAAPL/APL/APL/
+APL/APL/gIBAgIBAAPL/APL/APL/APL/APL/gIBAgIBAAPL/gIBAgIBAgIBAgIBAgIBAgIBA
+gIBAAPL/wMDAwMDAAADAwMDAwMDAwMAA8v+AgECAgECAgECAgECAgECAgECAgECAgECAgECA
+gECAgECAgECAgECAgECAgECAgECAgECAgECAgECAgECAgECAgEAA8v/AwMDAwMDAwMAAAMDA
+wMDAwMDAwMDAwADy/wDy/wDy/wDy/wDy/wDy/wDy/wDy/wDy/wDy/wDy/wDy/wDy/wDy/wDy
+/wDy/wDy/wDy/wDy/wDy/wDy/wDy/8DAwMDAwMDAwMDAwAAAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAAAAAAAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAAADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAAAAAAAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAAAAAAf39/
-f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/wMDAwMDAf39/f39/f39/
-f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/AAAAAAAAf39/f39/f39/f39/f39/
-f39/f39/f39/f39/f39/f39/f39/f39/f39/wMDAwMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAA
-wMDAAAAAwMDAAAAAwMDAAAAAwMDAAAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AA==</Icon>
+wMAAAA==</Icon>
 						<AppliesTo>
 							<Apply type="ToolboxItemImage"/>
 						</AppliesTo>
@@ -2512,10 +2618,10 @@ suL/suL/suL/suL/suL/suL/suL/suL/suL/suL/suL/FQCIFQCIsuL/suL/suL/suL/suL/
 suL/suL/suL/suL/suL/suL/suL/suL/suL/wMDAFQCIFQCIwMDAFQCIwMDAFQCIwMDAFQCI
 wMDAFQCIwMDAFQCIwMDAFQCIwMDAFQCIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
+UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
+aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
+cwA9ADsAUwBhAHYAZQBUAGEAZwA9ADUANwA1ADIAMgA0ADcANgA7AAAAeAB4ACMAOwAA
 AA==</Icon>
 						<AppliesTo>
 							<Apply type="ToolboxItemImage"/>
@@ -2527,8 +2633,9 @@ AA==</Icon>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="GDW 2.0::TCF Stream(UML::PackagingComponent)" type="" description="" unit="" values="" default="TCF Stream"/>
-							<Tag name="GDW 2.0::StartStream(UML::Activity)" type="" description="" unit="" values="" default="Start Stream"/>
+							<Tag name="GDW 2.0::OCDB Stream(UML::PackagingComponent)" type="" description="" unit="" values="" default="OCDB Stream"/>
 							<Tag name="GDW 2.0::Poll Job(UML::Activity)" type="" description="" unit="" values="" default="Polling Job"/>
+							<Tag name="GDW 2.0::StartStream(UML::Activity)" type="" description="" unit="" values="" default="Start Stream"/>
 							<Tag name="GDW 2.0::Box Job(UML::Activity)" type="" description="" unit="" values="" default="Box Job"/>
 							<Tag name="GDW 2.0::BTEQ Job(UML::Activity)" type="" description="" unit="" values="" default="BTEQ Job"/>
 							<Tag name="GDW 2.0::TCF Loop(UML::Activity)" type="" description="" unit="" values="" default="TCF Loop"/>
