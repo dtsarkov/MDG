@@ -152,7 +152,11 @@ History
 	+ created "OCDB Job" element
 	+ changed "TCF Stream" and "OCDB Stream" elements shape scripts  
 		
-	
+0.37
+-----
+	- fixed bug in "TCF Stream" shape script incorrectly showing "Offset" days.
+
+
 	add System element
 	add Role element
 	add "R Config Mapping" pattern/element

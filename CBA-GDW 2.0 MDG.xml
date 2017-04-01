@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<MDG.Technology version="1.0"><Documentation id="CBAGDW20" name="CBA GDW 2.0" version="0.36" notes="A set of custom elemnts, connectors and toolboxes to streamline GDW 2.0 design activities."/><UMLProfiles><UMLProfile profiletype="uml2">
+<MDG.Technology version="1.0"><Documentation id="CBAGDW20" name="CBA GDW 2.0" version="0.37" notes="A set of custom elemnts, connectors and toolboxes to streamline GDW 2.0 design activities."/><UMLProfiles><UMLProfile profiletype="uml2">
 			<Documentation id="98F2FC99-0" name="GDW 2.0" version="1.0" notes="GDW 2.0"/>
 			<Content>
 				<Stereotypes>
@@ -318,23 +318,23 @@ AACAAAAAAHN0ci5kYXRVVAUAB2n2nlhQSwUGAAAAAAEAAQA+AAAAOQMAAAAA</Image>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="TCF Stream" metatype="TCF Stream" notes="" cx="150" cy="100" bgcolor="12377081" fontcolor="139" bordercolor="139" borderwidth="1" hideicon="0">
-						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIADBcS0paxYEP/QIAAFQNAAAHABEAc3RyLmRhdFVUDQAHlPaeWJT2nliU9p5Y
-zVbRbtNAENxXI/EPVvJAKiHRCnggtIi0JYBEC2qCKoRQFGInqUhcFDsghPrvzO76cne2kzqN
-EMiyfWfPzp5n5+6c0pSG9J1iCmmO1hUl9Jvu0z0KaIb+L7qmJWXUR0tRRzgb9BXPFxThyQK9
-53nEIxwJ3vSENULrZx6RAbcEWpGK1muKpxmNkXmGY4SYmXC3aCJvPgpiQd0cceIg9nCY3D1B
-f8A18TCvPZZjZ9ybmbp4k+DuooojKiNcHr1eADsCagjsBLgYqH16KOcBrvZuI1m7CFmW0Dl1
-KtSC1hl0yISngcgGneO8LZLjuGIRqqhRJ/QKkX1cL5x4W8Wjf3YYV9ivtl8crrx5F3cGwCzw
-bCzPuRXRG1yvUJcpWDT6KSphI1gLdehM5kaMXoZsWseGeDzzKqAxzL5d1U206+NL5IzQmyL6
-wMtxhrw/gOnjrsxFDwX0Lh+xYqqzVnM9q8VURK33HivGbfXeZUGv6jh1+zl6c/R4js3xfAhl
-M3nCM2+Tl5nZ3F3WzYyuwwJih7D3hhgZ15DXoBitaOW0JGdzXRZAzQF1xDETIAx2lOcoujLA
-6LbD7+YwnQdcUXZ1Ijo3xdecKRZHa72aBT2rI42iZbRp3VRWwmTxNedvqzNPH5M7T/++5uUx
-2dkZ5vFPsHoU67Tt6hEAOSZ2fyhapXD2EGNkfB+u7VIbR494R41F+ZDe0qmwhHK6aroV0xnV
-BEsHu2J7I1u5ljd4w97n79mc4wEdCscLtHhEPott++uO8ay/ptRdewyvuf9ve5jZfV3lrGpc
-lxB6hVIJXZFS9Pj/ok3sS/7WcBW53iEdMHBFI+LdMYXHr4Ed4D8sxvFN8vA/il9BfySf8da6
-5DbGJtBfCm5Z75VypkM4pUOf5OvLPOu0erlSpb4mPPdU2wHxPwWvWekOilTz7a5HH7PnDLtZ
-XUXMSly99/kZmPM9lBrn65J1V30dj7FTp/msTMWnp8Dwmulz313Zuhl21Xq/Mr6snFE4zGdB
-C+x7XpxG6fUPUEsBAhcLFAAAAAgAMFxLSlrFgQ/9AgAAVA0AAAcACQAAAAAAAAAAAACAAAAA
-AHN0ci5kYXRVVAUAB5T2nlhQSwUGAAAAAAEAAQA+AAAAMwMAAAAA</Image>
+						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAJ5Aa0opyWSd/AIAAFYNAAAHABEAc3RyLmRhdFVUDQAHn6/DWJ+vw1ifr8NY
+zVZdb9MwFL2vQeI/RO0DnYTEJuCBsiG6jTKkbaC1aEIIVaVJ24k2Q00KmtD+O+feG9d2kn5R
+IVAUx3bOPXbOPbaT0pj69J1iCmmK2g0l9Ise0gMKaIL2Hd3SnDLqoqaoI9w1+or+GUXomaH1
+Mo94givBm46wRqj9zCMy4OZAK1LRWqbozWiIkSe4BoiZCHeDRvLmoyBm1M4RJw5iD5cZuyPo
+DygTD/PWYzl25r2aqY03CZ4uqjijMsLl0fIK2AFQfWBHwMVA7dNjuQ9Q2qeNZO0ijDKHzqmT
+oQa0zqBDJjw1RNboEve6SI7jjEXIokad0BtEdlFeOfE2i0f/7DKusF9tvzhcePNP3BkAM0Pf
+UPq5FtEZyhvkZQwWjX6OTNgI1kIdOpG1EaOVYTTNY008nnkZ0Bhm3y7rJtr18TXGjNAaI/rA
+G+MC4/4ApounMhc9FNB5PmPFVI9azfViI6Yiarn3WDGuq/euC3pVx6nbL9GaosVrbIr+PpTN
+pIdX3iovM7N5uqyrGV2HBcQOYe/1MTPOIe9BMWrRwmlJzua6LICaPWqJY0ZAGOwgH6PoygCz
+2w6/m8N0HXBG2dWJ6FwXX/NIsTha81Uv6FkdaRQto03tvjITZhRfc/62TdbpU3LX6d/XvDwn
+uzrDPP4Zdo9inrbdPQIgh8TuD0WrFM7uY46M78K1bWri6hCfqLEoH9I7OhWWUG5XTTdjuqLq
+YGnhVGyuZCvn8h5v2Pv8PavHeESHwvEKNZ6Rz2Lr/r5jPOvvKZvuPYbXPP+3M8ycvq5yVjXN
+Syh50P0oRYv/LprEruQvDRdxy/3RAgPnMyI+G1M4/BbYHv7CYlzfgOB8FD3iz+Mz3lqPrGPk
+WX8peGW5U8ojHcInLfoEr1TxVCsV0uuFKptrwitPte0R/1HwjpXuoEg13+56dLF2LnCWbaqI
+2YerT76yx95DqWG+K1l3rdfR7hbHOKnTfFWm4tRToHjP9Nm313b7MXbVe78yvqyeUTnMV0ID
+7HtenEZp+RtQSwECFwsUAAAACACeQGtKKclknfwCAABWDQAABwAJAAAAAAAAAAAAAIAAAAAA
+c3RyLmRhdFVUBQAHn6/DWFBLBQYAAAAAAQABAD4AAAAyAwAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="PackagingComponent">
 								<Property name="_AttInh" value="0"/>
@@ -2670,4 +2670,4 @@ AA==</Icon>
 				<TaggedValueTypes/>
 			</Content>
 		</UMLProfile>
-	</UIToolboxes><ModelSearches><Search Name="TCF::StreamByID" GUID="{B2F6983B-4991-4eb0-95C5-96146B776AE4}" PkgGUID="-1" Type="0" LnksToObj="0" CustomSearch="1" AddinAndMethodName=""><SrchOn><RootTable Filter="select  	 obj.ea_guid 		as CLASSGUID&#xA;			,Object_Type 	as CLASSTYPE&#xA;			,obj.Name&#xA;from 	 t_object								obj&#xA;			,t_objectproperties               tag&#xA;where 	obj.Object_ID = tag.Object_ID&#xA;and		tag.Property = 'TCF::Stream ID'&#xA;and		obj.Stereotype = 'TCF Stream'&#xA;and		tag.Value = '&lt;Search Term&gt;'" Type="-1"><TableName Display="Custom SQL Search" Name=""/><TableHierarchy Display="" Hierarchy=""/></RootTable></SrchOn><LnksTo/></Search></ModelSearches><ModelTemplates><Model name="TCF Stream" description="TCF Stream Template" location="CBA-GDW 2.0 TCF Stream.xml" default="" icon="32" filter=""/><Model name="Data Model" description="Data Model Template" location="CBA-GDW 2.0 Data Model.xml" default="" icon="32" filter=""/></ModelTemplates></MDG.Technology>
+	</UIToolboxes><ModelSearches/><ModelTemplates><Model name="TCF Stream" description="TCF Stream Template" location="CBA-GDW 2.0 TCF Stream.xml" default="" icon="32" filter=""/><Model name="Data Model" description="Data Model Template" location="CBA-GDW 2.0 Data Model.xml" default="" icon="32" filter=""/></ModelTemplates></MDG.Technology>
