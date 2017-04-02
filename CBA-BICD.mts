@@ -1,5 +1,5 @@
 <MDG.Selections model="C:\Work\Design\MDG\CBA-GDW 2.0 MDG.eap">
-	<Technology id="CBAGDW20" name="CBA GDW 2.0" version="0.37" notes="A set of custom elemnts, connectors and toolboxes to streamline GDW 2.0 design activities." filename="C:\Work\Design\MDG\CBA-GDW 2.0 MDG.xml"/>
+	<Technology id="CBAGDW20" name="CBA GDW 2.0" version="0.38" notes="A set of custom elemnts, connectors and toolboxes to streamline GDW 2.0 design activities." filename="C:\Work\Design\MDG\CBA-GDW 2.0 MDG.xml"/>
 	<Profiles directory="C:\Work\Design\MDG" files="CBA-GDW 2.0 Elements.xml"/>
 	<Patterns directory="C:\Work\Design\MDG" files="CBA-GDW 2.0 Patterns Data Flow Diagram Key.xml,CBA-GDW 2.0 Patterns Data Model Diagram Key.xml,CBA-GDW 2.0 Patterns TCF Process.xml"/>
 	<DiagramProfile directory="C:\Work\Design\MDG" files="CBA-GDW 2.0 Diagrams.xml"/>

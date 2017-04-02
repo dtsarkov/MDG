@@ -23,6 +23,7 @@
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="UML::Association" type="" description="" unit="" values="" default="Relationship"/>
+					<Tag name="UML::Generalization" type="" description="" unit="" values="" default="Inheritance"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Misc" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">

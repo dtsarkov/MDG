@@ -154,10 +154,15 @@ History
 		
 0.37
 -----
-	- fixed bug in "TCF Stream" shape script incorrectly showing "Offset" days.
+	+ fixed bug in "TCF Stream" shape script incorrectly showing "Offset" days.
+0.38	
+-----
+	+ added "TCF C-Delta" element to Data Flow toolbox
+	+ added "Inheritance" connector to Data Modeling toolbox	
+	+ added "Show Details" diagram property to "TCF Stream" and "OCDB Stream" elements
 
 
-	add System element
+	- added "TCF System" element 
 	add Role element
 	add "R Config Mapping" pattern/element
 
