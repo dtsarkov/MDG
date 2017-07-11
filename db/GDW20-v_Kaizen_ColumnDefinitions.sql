@@ -69,26 +69,25 @@ UNION ALL
 
 SELECT	 do.sequence*10000+1000
 		+COALESCE(pkg.TPos+1,1)*1000000+COALESCE(d.TPos+1,1)*100000	
-		+(rank() over(partition by o.object_id order by p.name))*100
+		+p.ancestor_rank*100
 										AS "COLUMN.ID"
 		,pkg.package_id
 		,pkg.parent_id 
-		,'<b><i><font color="navy">::'
-		+p.Name
-		+'</i></b></font>'					AS "ColumnCode.Formatted"
+		,'<b><i><font color="teal">::'
+		+p.ancestor_name
+		+'</i></b></font>'				AS "ColumnCode.Formatted"
 		,NULL							AS ColumnName
 		,NULL							AS ColumnType
 		,NULL							AS ColumnDefault
 		,NULL							AS ColumnNullFlag
 		,NULL							AS ColumnCompression
-		,convert(varchar,p.Note)		AS "Notes.Formatted" 
+		,NULL							AS "Notes.Formatted" 
 
-FROM	t_diagram			d	
-JOIN	t_package			pkg	ON pkg.package_id		= d.package_id
-JOIN	t_diagramobjects	do	ON d.diagram_id			= do.diagram_id
-JOIN	t_object			o	ON o.object_id			= do.object_id
-JOIN	t_connector			c	ON c.start_object_id	= do.object_id		and c.connector_type = 'Generalization'
-JOIN	t_object			p	ON p.object_id			= c.end_object_id	and	p.stereotype	 = 'table'
+FROM	t_diagram				d	
+JOIN	t_package				pkg	ON pkg.package_id		= d.package_id
+JOIN	t_diagramobjects		do	ON d.diagram_id			= do.diagram_id
+JOIN	t_object				o	ON o.object_id			= do.object_id
+JOIN	GDW20.v_AncestorTable	p	ON p.object_id			= do.Object_ID
 
 WHERE	d.StyleEx		like '%GDW 2.0 Diagrams::Physical Data Model%'
 and		o.stereotype	= 'table'
@@ -100,12 +99,12 @@ UNION ALL
 
 SELECT	 do.sequence*10000+1000
 		+COALESCE(pkg.TPos+1,1)*1000000+COALESCE(d.TPos+1,1)*100000	
-		+(rank() over(partition by o.object_id order by p.name))*100
+		+p.ancestor_rank*100
 		+a.Pos+1
 										AS "COLUMN.ID"
 		,pkg.package_id
 		,pkg.parent_id 
-		,'-    '+a.Name					AS "ColumnCode.Formatted"
+		,'-    <i>'+a.Name+'</i>'		AS "ColumnCode.Formatted"
 		,a.Style						AS ColumnName
 		,a.Type							
 		+CASE WHEN a.Length <> 0 
@@ -123,18 +122,17 @@ SELECT	 do.sequence*10000+1000
 		,ta.Value						AS ColumnCompression
 		,convert(varchar,a.Notes)		AS "Notes.Formatted" 
 
-FROM	t_diagram			d	
-JOIN	t_package			pkg	ON pkg.package_id		= d.package_id
-JOIN	t_diagramobjects	do	ON d.diagram_id			= do.diagram_id
-JOIN	t_object			o	ON o.object_id			= do.object_id
-JOIN	t_connector			c	ON c.start_object_id	= do.object_id		and c.connector_type = 'Generalization'
-JOIN	t_object			p	ON p.object_id			= c.end_object_id	and	p.stereotype	 = 'table'
-JOIN	t_attribute			a	ON a.object_id			= p.object_id		and (
-									(a.scope = 'Public'		and not do.ObjectStyle like '%AttPub=0%')
-								OR	(a.scope = 'Protected'	and not do.ObjectStyle like '%AttPro=0%')
-								OR	(a.scope = 'Private'	and not do.ObjectStyle like '%AttPri=0%')
-								OR	(a.scope = 'Package'	and not do.ObjectStyle like '%AttPkg=0%')
-								)
+FROM	t_diagram				d	
+JOIN	t_package				pkg	ON pkg.package_id		= d.package_id
+JOIN	t_diagramobjects		do	ON d.diagram_id			= do.diagram_id
+JOIN	t_object				o	ON o.object_id			= do.object_id
+JOIN	GDW20.v_AncestorTable	p	ON p.object_id			= do.Object_ID
+JOIN	t_attribute				a	ON a.object_id			= p.ancestor_id	and (
+										(a.scope = 'Public'		and not do.ObjectStyle like '%AttPub=0%')
+									OR	(a.scope = 'Protected'	and not do.ObjectStyle like '%AttPro=0%')
+									OR	(a.scope = 'Private'	and not do.ObjectStyle like '%AttPri=0%')
+									OR	(a.scope = 'Package'	and not do.ObjectStyle like '%AttPkg=0%')
+									)
 LEFT JOIN t_attributetag	ta	ON ta.ElementId		= a.id and ta.property = 'Compress'
 
 WHERE	d.StyleEx		like '%GDW 2.0 Diagrams::Physical Data Model%'

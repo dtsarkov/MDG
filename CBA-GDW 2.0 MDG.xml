@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<MDG.Technology version="1.0"><Documentation id="CBAGDW20" name="CBA GDW 2.0" version="0.38" notes="A set of custom elemnts, connectors and toolboxes to streamline GDW 2.0 design activities."/><UMLProfiles><UMLProfile profiletype="uml2">
+<MDG.Technology version="1.0"><Documentation id="CBAGDW20" name="CBA GDW 2.0" version="0.39.10" notes="A set of custom elemnts, connectors and toolboxes to streamline GDW 2.0 design activities."/><UMLProfiles><UMLProfile profiletype="uml2">
 			<Documentation id="98F2FC99-0" name="GDW 2.0" version="1.0" notes="GDW 2.0"/>
 			<Content>
 				<Stereotypes>
+					<Stereotype name="Business Unti" metatype="Busienss Unit" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Actor"/>
+						</AppliesTo>
+					</Stereotype>
 					<Stereotype name="CMD Job" metatype="CMD Job" notes="" cx="100" cy="45" bgcolor="5921370" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAA
 AAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAMDAwADA3MAA8MqmAAAgQAAAIGAAACCAAAAg
@@ -46,9 +51,16 @@ BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=</Icon>
 							<Tag name="AS::success_codes" type="" description="Defines which exit codes indicate job success.  Default: 0" unit="" values="" default="0"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="Fact Table" notes="" cx="90" cy="70" bgcolor="16769470" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
+					<Stereotype name="Fact Table" metatype="Fact Table" notes="" cx="90" cy="70" bgcolor="16769470" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Table"/>
+						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="Macro" metatype="Macro" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="EAUML::procedure" baseStereotypes="EAUML::procedure">
+						<AppliesTo>
+							<Apply type="Class">
+								<Property name="isActive" value=""/>
+							</Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="OCDB Job" metatype="OCDB Job" notes="" cx="105" cy="45" bgcolor="10198015" fontcolor="16777215" bordercolor="0" borderwidth="1" hideicon="0">
@@ -99,6 +111,30 @@ AAcv6Z5YUEsFBgAAAAABAAEAPgAAAAwBAAAAAA==</Image>
 							<Tag name="OCDB::Pattern" type="enumeration" description="" unit="" values="Delta Apply,Full Apply" default="Delta Apply"/>
 							<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
 						</TaggedValues>
+					</Stereotype>
+					<Stereotype name="Scope Item" metatype="Scope Item" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAGKf2kpH+CsGogIAAEAOAAAHABEAc3RyLmRhdFVUDQAHlWdRWZVnUVmVZ1FZ
+7Vddb9MwFL2vQeI/VN0LkybBhpD40B5gdOMBDUSL+ojY0naTklAlLmig/XfOuTcmTpp+UmlM
+QlYcNz73+H7abiFX8lWmMpKOpBhdSya/5KE8kEgS/L6RbzITJwOMDHWMpysX+J5LjC85fr0q
+JR6jZZjpK2uM0Y9SwgE3A9qQhra+wFcnY6ycoF1CJlHuRzLRmc+KyOW0RJwEiH00v3Zf0R/R
+ZzXMWY3lTaD3cqZTzGR4h6imRvOIkMcso9eyOT1Mzz5s+olRXc76a/ikg5mOvIMvC0jkWINs
+OXhuMNNVP9PHb5Wb0UuA7MoBnkM8+5Dm4yMaqeXjYN0jeYJ2IE/RVxpE8gmzl8qZwepEscTx
+OSxl7B1KMeYxNJghP4ogs6irw5pOmUy/oeq3SpaSzLUYFpvcifTkHPnYg451hqbHBugnyjAA
+A21JIDVGY6xcq3+W6UHPVbLUpdfQ4LYc3YJzpLGg9RU768PH7D2YLxRF7hTac136x2mcWX02
+X19jPQ76zClTugUTGcal/DaaePm/0yKHPRPMbK9HxbCOJvO18QxRZh+iKJcAM9Xobl8V1K8A
+T6qW+apYlN2WWTamvcd31kyHsLpDK8Jsv5IvwppjDLLyHOhiV+HO56R+ckTyfSN085SJFF8/
+ZYjz76nmApno9z15rStxl9i7N36udtDQy5uf0uYN5jq/cxRjxxz9qRWT5omwTGKou42DRBue
+0TQfrxNNZsp6aC+x7Hx6Ic9b63A+FxI9mVfnw7+XC/5MDDNhFz73O/cm/l688/HOYp4eYkTd
+qX1c+vwcX1L8vh8eD0////XXlg9HK/MhtKZZgQNocCYvF9zV2nLE+rvPkzBLqrtFlSPNe+ku
+bvKLbpj2n+OD+neiPrbbN2+qFp1dVaj1vwFQSwECFwsUAAAACABin9pKR/grBqICAABADgAA
+BwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHlWdRWVBLBQYAAAAAAQABAD4AAADYAgAA
+AAA=</Image>
+						<AppliesTo>
+							<Apply type="Change"/>
+						</AppliesTo>
+						<DiagramProperties>
+							<DiagramProperty name="Show Details" option="ShowDetails" default="1"/>
+						</DiagramProperties>
 					</Stereotype>
 					<Stereotype name="TCF C-Delta" metatype="TCF C-Delta" notes="" cx="185" cy="45" bgcolor="16760992" fontcolor="16777215" bordercolor="6710886" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAA
@@ -158,10 +194,10 @@ suL/suL/suL/suL/suL/suL/suL/suL/suL/suL/suL/FQCIFQCIsuL/suL/suL/suL/suL/
 suL/suL/suL/suL/suL/suL/suL/suL/suL/wMDAFQCIFQCIwMDAFQCIwMDAFQCIwMDAFQCI
 wMDAFQCIwMDAFQCIwMDAFQCIwMDAFQCIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
-UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
-aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
-cwA9ADsAUwBhAHYAZQBUAGEAZwA9AEEAMwBBADgARQA2ADEANwA7AAAALwAvAC8ADQAK
+wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AA==</Icon>
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAKBTgkr2DJNmhAEAAMAFAAAHABEAc3RyLmRhdFVUDQAHbNLgWGzS4Fhs0uBY
 vVNNS8NAFJxrBP9DsZcKBevXSTxIUTxIFS30WGI3poUmSrJVRPzvztvN5stUmhwkZPP2Zebt
@@ -238,10 +274,10 @@ jo44jo44jo44jo44jo44jo44jo44jo44jo44jo44jo44Hea1wMDAHea1Hea1Hea1Hea1Hea1
 Hea1Hea1Hea1Hea1Hea1Hea1Hea1Hea1Hea1wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
-UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
-aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
-cwA9ADsAUwBhAHYAZQBUAGEAZwA9AEEAMwBBADgARQA2ADEANwA7AAAALwAvAC8ADQAK
+wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AA==</Icon>
 						<AppliesTo>
 							<Apply type="Activity">
@@ -275,10 +311,10 @@ wMDAf39/wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAf39/f39/wMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAf39/f39/wMDAf39/wMDAf39/wMDAf39/
 wMDAf39/wMDAf39/wMDAf39/wMDAf39/wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
-UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
-aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
-cwA9ADsAUwBhAHYAZQBUAGEAZwA9AEEAMwBBADgARQA2ADEANwA7AAAALwAvAC8ADQAK
+wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AA==</Icon>
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIACqGzEgkNJQFggEAAL4FAAAHABEAc3RyLmRhdFVUDQAHgZJdV4GSXVeBkl1X
 vVPBSsNAEH3XCP5DsZcKBaviSTxoUTxV0EK9SezGtNBESbaKiP/um91sso2pNDlIyO7M7JvZ
@@ -327,12 +363,12 @@ c3RyLmRhdFVUBQAHgZJdV1BLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 							<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="Hub" notes="" cx="90" cy="70" bgcolor="16777193" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+					<Stereotype name="Hub" metatype="Hub" notes="" cx="90" cy="70" bgcolor="16777193" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Table"/>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="Link" notes="" cx="90" cy="70" bgcolor="15663086" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+					<Stereotype name="Link" metatype="Link" notes="" cx="90" cy="70" bgcolor="15663086" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Table"/>
 						</AppliesTo>
@@ -397,12 +433,12 @@ BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=</Icon>
 							<Tag name="AS::Polling Days" type="enumeration" description="" unit="" values="All,Work Days" default="All"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="Rerence Table" notes="" cx="90" cy="70" bgcolor="16053462" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+					<Stereotype name="Rerence Table" metatype="Reference Table" notes="" cx="90" cy="70" bgcolor="16053462" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Table"/>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="Satellite" notes="" cx="90" cy="70" bgcolor="14745599" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+					<Stereotype name="Satellite" metatype="Satellite" notes="" cx="90" cy="70" bgcolor="14745599" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Table"/>
 						</AppliesTo>
@@ -642,7 +678,7 @@ AAAAAA==</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="database" notes="" cx="90" cy="70" bgcolor="16316664" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+					<Stereotype name="database" metatype="database" notes="" cx="90" cy="70" bgcolor="16316664" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAOCLzEg2uU0EggEAALYFAAAHABEAc3RyLmRhdFVUDQAHhJxdV4ScXVeEnF1X
 vVPBSsNAEH3XCP5DsJcKBaviSTxoVTz1oIUeJe3GWmijJBtFxH/3zW423SyNhBwkZHdm9s3s
 zJvZAq9I8I4UMbaU1sjwjUMcIMKG+hfeUEJjRsmirvgfYUF7DkVLTu2y8shofTIRFaXPCq2J
@@ -2563,6 +2599,8 @@ AAD/////RgAAABwAAAAQAAAARU1GKwJAAAAMAAAAAAAAAA4AAAAUAAAAAAAAABAAAAAUAAAA
 							<Apply type="ToolboxPage"/>
 						</AppliesTo>
 						<TaggedValues>
+							<Tag name="GDW 2.0::Macro(UML::Class)" type="" description="" unit="" values="" default="Macro"/>
+							<Tag name="GDW 2.0::Scope Item(UML::Change)" type="" description="" unit="" values="" default="Scope Item"/>
 							<Tag name="GDW 2.0::Hub(UML::Table)" type="" description="" unit="" values="" default="Hub"/>
 							<Tag name="GDW 2.0::Link(UML::Table)" type="" description="" unit="" values="" default="Link"/>
 							<Tag name="GDW 2.0::Satellite(UML::Table)" type="" description="" unit="" values="" default="Satellite"/>
@@ -2857,4 +2895,4 @@ AA==</Icon>
 				<TaggedValueTypes/>
 			</Content>
 		</UMLProfile>
-	</UIToolboxes><ModelSearches/><ModelTemplates><Model name="TCF Stream" description="TCF Stream Template" location="CBA-GDW 2.0 TCF Stream.xml" default="" icon="32" filter=""/><Model name="Data Model" description="Data Model Template" location="CBA-GDW 2.0 Data Model.xml" default="" icon="32" filter=""/></ModelTemplates></MDG.Technology>
+	</UIToolboxes><ModelSearches><Search Name="ElementByGUID" GUID="{073D87DB-8A58-4440-A2BF-59137715B3CC}" PkgGUID="-1" Type="0" LnksToObj="0" CustomSearch="1" AddinAndMethodName=""><SrchOn><RootTable Filter="SELECT o.ea_guid AS CLASSGUID, o.Object_Type AS CLASSTYPE ,o.Name ,o.Object_ID, o.*&#xA;FROM t_object     o&#xA;WHERE o.ea_guid = '&lt;Search Term&gt;'  or cast(o.object_id as varchar(255))= '&lt;Search Term&gt;' &#xA;" Type="-1"><TableName Display="Custom SQL Search" Name=""/><TableHierarchy Display="" Hierarchy=""/></RootTable></SrchOn><LnksTo/></Search></ModelSearches><ModelTemplates><Model name="TCF Stream" description="TCF Stream Template" location="CBA-GDW 2.0 TCF Stream.xml" default="" icon="32" filter=""/><Model name="Data Model" description="Data Model Template" location="CBA-GDW 2.0 Data Model.xml" default="" icon="32" filter=""/></ModelTemplates></MDG.Technology>

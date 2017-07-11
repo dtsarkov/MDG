@@ -8,6 +8,8 @@
 					<Apply type="ToolboxPage"/>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="GDW 2.0::Macro(UML::Class)" type="" description="" unit="" values="" default="Macro"/>
+					<Tag name="GDW 2.0::Scope Item(UML::Change)" type="" description="" unit="" values="" default="Scope Item"/>
 					<Tag name="GDW 2.0::Hub(UML::Table)" type="" description="" unit="" values="" default="Hub"/>
 					<Tag name="GDW 2.0::Link(UML::Table)" type="" description="" unit="" values="" default="Link"/>
 					<Tag name="GDW 2.0::Satellite(UML::Table)" type="" description="" unit="" values="" default="Satellite"/>
