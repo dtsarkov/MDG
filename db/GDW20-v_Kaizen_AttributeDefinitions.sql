@@ -7,7 +7,9 @@ CREATE VIEW GDW20.v_Kaizen_AttributeDefinitions AS
 -- ----------------------------------------------------------------------------
 -- Entity name(s)
 SELECT	 do.sequence*1000 			
-		+COALESCE(pkg.TPos+1,1)*10000	AS "column.id"
+		+COALESCE(pkg.TPos+1,1)*100000
+		+COALESCE(d.TPos+1,1)*100000
+									AS "column.id"
 		,d.package_id
 		,pkg.parent_id
 		,'<b><font color="navy">'
@@ -34,7 +36,9 @@ UNION ALL
 
 -- Attributes
 SELECT	 do.sequence*1000+a.pos+1	
-		+COALESCE(pkg.TPos+1,1)*10000 AS "column.id"
+		+COALESCE(pkg.TPos+1,1)*100000
+		+COALESCE(d.TPos+1,1)*100000
+									AS "column.id"
 		,d.package_id
 		,pkg.parent_id
 		,'-    '+a.Style			AS "ColumnName.Formatted"
@@ -61,7 +65,8 @@ UNION ALL
 
 -- Parrent Names
 SELECT	do.sequence*1000
-		+COALESCE(pkg.TPos+1,1)*10000
+		+COALESCE(pkg.TPos+1,1)*100000
+		+COALESCE(d.TPos+1,1)*100000
 		+p.ancestor_rank*100							AS "column.id"
 		,d.package_id
 		,pkg.parent_id
@@ -86,7 +91,8 @@ UNION ALL
 
 -- Inherited Attributes
 SELECT	 do.sequence*1000
-		+COALESCE(pkg.TPos+1,1)*10000
+		+COALESCE(pkg.TPos+1,1)*100000
+		+COALESCE(d.TPos+1,1)*100000
 		+p.ancestor_rank*100
 		+a.pos+1	
 									AS "column.id"
@@ -123,4 +129,12 @@ and		do.ObjectStyle like '%AttInh=1%'
 GO
 
 select * From GDW20.v_Kaizen_AttributeDefinitions
+where Package_ID in (
+	select Package_ID from t_package where Name = 'Refactor RSS Base Fact Data Model'
+)	
 order by [column.ID]
+
+select * from t_diagram
+where Package_ID in (
+	select Package_ID from t_package where Name = 'Refactor RSS Base Fact Data Model'
+)	
