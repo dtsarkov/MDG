@@ -51,9 +51,43 @@ BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=</Icon>
 					<Tag name="AS::success_codes" type="" description="Defines which exit codes indicate job success.  Default: 0" unit="" values="" default="0"/>
 				</TaggedValues>
 			</Stereotype>
+			<Stereotype name="Control File" metatype="Control File" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Artifact">
+						<Property name="_tagGroupings" value="Extentions=Properties;"/>
+						<Property name="_tagGroups" value="Properties"/>
+						<Property name="fileName" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Extentions" type="" description="" unit="" values="" default="CTL"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Data File" metatype="Data File" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Artifact">
+						<Property name="_tagGroupings" value="Extentions=Properties;"/>
+						<Property name="_tagGroups" value="Properties"/>
+						<Property name="fileName" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Header/Trailer" type="enumeration" description="" unit="" values="Y,N" default="Y"/>
+					<Tag name="File ID" type="" description="" unit="" values="" default=""/>
+					<Tag name="Extention" type="" description="" unit="" values="" default="DAT"/>
+					<Tag name="Delimeter" type="" description="" unit="" values="" default="|"/>
+				</TaggedValues>
+			</Stereotype>
 			<Stereotype name="Fact Table" metatype="Fact Table" notes="" cx="90" cy="70" bgcolor="16769470" fontcolor="0" bordercolor="0" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Table"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Folder" metatype="Folder" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Package">
+						<Property name="URI" value=""/>
+					</Apply>
 				</AppliesTo>
 			</Stereotype>
 			<Stereotype name="Macro" metatype="Macro" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="EAUML::procedure" baseStereotypes="EAUML::procedure">
@@ -178,6 +212,23 @@ BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=</Icon>
 					<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
+			<Stereotype name="TCF Export" metatype="TCF Export" notes="" cx="90" cy="70" bgcolor="16761815" fontcolor="16777215" bordercolor="8388736" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="_tagGroupings" value="TD::Sessions=Properties;TD::User Name=Properties;"/>
+						<Property name="_tagGroups" value="Properties"/>
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="TD::Sessions" type="" description="" unit="" values="" default="2"/>
+					<Tag name="TD::User Name" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
 			<Stereotype name="TCF Loop" alias="TL_&lt;CID&gt;_NAME" metatype="TCF Loop" notes="" cx="200" cy="145" bgcolor="11723519" fontcolor="0" bordercolor="139" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
@@ -194,10 +245,10 @@ suL/suL/suL/suL/suL/suL/suL/suL/suL/suL/suL/FQCIFQCIsuL/suL/suL/suL/suL/
 suL/suL/suL/suL/suL/suL/suL/suL/suL/wMDAFQCIFQCIwMDAFQCIwMDAFQCIwMDAFQCI
 wMDAFQCIwMDAFQCIwMDAFQCIwMDAFQCIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
+UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
+aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
+cwA9ADsAUwBhAHYAZQBUAGEAZwA9AEIANAA2ADEARQAxADMARQA7AAAAAAAAAAAAAAAA
 AA==</Icon>
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAKBTgkr2DJNmhAEAAMAFAAAHABEAc3RyLmRhdFVUDQAHbNLgWGzS4Fhs0uBY
 vVNNS8NAFJxrBP9DsZcKBevXSTxIUTxIFS30WGI3poUmSrJVRPzvztvN5stUmhwkZPP2Zebt
@@ -226,26 +277,29 @@ AABzdHIuZGF0VVQFAAds0uBYUEsFBgAAAAABAAEAPgAAALoBAAAAAA==</Image>
 					<Tag name="TCF::Process Names" type="" description="Comma separated list of TCF process name patterns the job uses to determine list of TCF processes to execute. The patterns are specified using SQL wildcard symbols." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="TCF System" metatype="TCF System" notes="" cx="150" cy="100" bgcolor="15463935" fontcolor="10917" bordercolor="10917" borderwidth="1" hideicon="0">
-				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAE5UgkrTOsWUlgEAAOIFAAAHABEAc3RyLmRhdFVUDQAHr9PgWK/T4Fiv0+BY
-vVNNS8NAEH3XCP6HYi8VCtavS8VDiZ+XHrTQo8RuTAtNlGSriPjffbObzZetND1IyO7M5M3s
-y5vZDHMEeEOIDmJaCyT4wj724GFJ/xOvWEFjQsuiLvke4JnxFIqRlN5FnpEw+mgqKlofOVoT
-syLSoTLamtXlrJCeZu0lrR4rSZ7mfligHU7zSw8D9HHMdbARYb9ui6oihLUinxX/LqvoIrw0
-s4VzSLvPd1zj6P6rzCnxnULPXRT1iEkZezFxsRTuuC4Q8TSdZ5/gvJLRTl/PVJ0xGhAf5Uir
-jVOxqabLXK+Y1cv+nVVr2jhxfZ5VekwvpueTacx4QH7aRBLDXOr5uCZuwvWhUbnUoKz6d8Vq
-fzyjr3QuIDNR4oZeSEsVfUryatUeeXjHE0ZG84gIh53lZzR76pFdO/wRn937ZKdI5kHzVqZG
-GdFGGcW7hULdhprfa/V0va0rJwy3mdVT8vtP5X5zmjJXETtnps0/q92f9jdolzvU7Iud/i6n
-eoRbDLn7nL4hH5lbQaTcl8Td42pjp9wuq7V/AFBLAQIXCxQAAAAIAE5UgkrTOsWUlgEAAOIF
-AAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAev0+BYUEsFBgAAAAABAAEAPgAAAMwB
-AAAAAA==</Image>
+			<Stereotype name="TCF System" metatype="TCF System" notes="" cx="150" cy="100" bgcolor="15463935" fontcolor="0" bordercolor="8355711" borderwidth="1" hideicon="0">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAHJjLUwvEm1w5gEAAJgHAAAHABEAc3RyLmRhdFVUDQAHHftZWh37WVod+1la
+xZRNTwIxEIbnuib+BwIXSUjErwuGA8HPCzFK4tGsLAIJoFmKxhj/u8+022V3BQIcNM220+Gd
+6fR9p8xkKKG8SV9KMsEayVS+ZF/2JJAx+095lbkY6WI5VJOvLM/4Y4nwxOzOk4gp3gebMcL6
+SNAGzBykR82wDdn1rD47Q+4x1gGZNM6wVlO0xxl+OZC61OSIub4S4X7dFJVFaNUR9cy53SzD
+i9ZliNaa+9g1vk6uxuWRGqc8RdzPRbXlksgu830u3vOyOHNxXinVYxdFAjAxvhfrVyuSG+aR
+DDjNJNHHcpaJ2E6fwGbt4Q3BDxKk49arUFTDR67mTc9U2/H2WDhxeZxTqsNuwq5NpRP8IfUZ
+65naytfp4JXIa7E+Y1afwPKryoVUpkxcsetjRalO0yRbVqNA3uVJWpbzAQiP7SVnFDUNqG47
+/CFjd51cF2k/GF51bJlRbiLLeCVlqFJg83spn17bPHNa4Sa9ekJ9f8nc75oeiY3ADol08ae5
+97P9C9rlDRV1cd1foatbci0N1jbd12Bo3yoiZh2Du5WLlUr51c2qSfPfhqsh2zn+3zTbOQsG
+9P533L5L1zSsqnrDUoocoaKyVLIZZ+BCuNaoBVd3+JyyvqfL2FVGvlvzpy5j/Xem9Zy72X8/
+UEsBAhcLFAAAAAgAcmMtTC8SbXDmAQAAmAcAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRV
+VAUABx37WVpQSwUGAAAAAAEAAQA+AAAAHAIAAAAA</Image>
 				<AppliesTo>
 					<Apply type="PackagingComponent">
-						<Property name="_tagGroupings" value="TCF::Control ID=TCF;"/>
+						<Property name="_makeComposite" value="False"/>
+						<Property name="_tagGroupings" value="TCF::Path Name=TCF;TCF::Control ID=TCF;"/>
 						<Property name="_tagGroups" value="TCF"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="TCF::Control ID" type="" description="" unit="" values="" default=""/>
+					<Tag name="TCF::Path Name" type="" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="H-AND" alias="AND" notes="" cx="90" cy="70" bgcolor="16777215" fontcolor="0" bordercolor="16711680" borderwidth="1" hideicon="0">
@@ -274,10 +328,10 @@ jo44jo44jo44jo44jo44jo44jo44jo44jo44jo44jo44Hea1wMDAHea1Hea1Hea1Hea1Hea1
 Hea1Hea1Hea1Hea1Hea1Hea1Hea1Hea1Hea1wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
+UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
+aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
+cwA9ADsAUwBhAHYAZQBUAGEAZwA9AEIANAA2ADEARQAxADMARQA7AAAAAAAAAAAAAAAA
 AA==</Icon>
 				<AppliesTo>
 					<Apply type="Activity">
@@ -421,8 +475,8 @@ BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=</Icon>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="AS::Polling Offset" type="" description="Business Date offset (+/-). Default value is 0" unit="" values="" default=""/>
-					<Tag name="AS::Polling Type" type="enumeration" description="" unit="" values="TCF,UPI,UPI2,ORA" default="TCF"/>
+					<Tag name="AS::Polling Offset" type="" description="Business Date offset (+/-). Default value is 0&#xA;Example 1: Offset = 2 means Business Date of the dependee Stream/Process must be completed for,&#xA;or after, the Business Date of the dependent (-s) Stream plus 2 days.&#xA;Wait - (Dependent Bus_Date 2013-08-16), (Dependee Bus_Date 2013-08-17), (Offset 2)&#xA;Pass - (Dependent Bus_Date 2013-08-16), (Dependee Bus_Date 2013-08-18), (Offset 2)&#xA;Pass - (Dependent Bus_Date 2013-08-16), (Dependee Bus_Date 2013-08-19), (Offset 2)&#xA;&#xA;Example2: Offset = -1 means Business Date of the dependee Stream|Process must be completed for,&#xA;or after, the Business Date of the dependent (-s) Stream minus 1.&#xA;Wait - (Dependent Bus_Date 2013-08-16), (Dependee Bus_Date 2013-08-14), (Offset -1)&#xA;Pass - (Dependent Bus_Date 2013-08-16), (Dependee Bus_Date 2013-08-15), (Offset -1)&#xA;Pass - (Dependent Bus_Date 2013-08-16), (Dependee Bus_Date 2013-08-17), (Offset -1)" unit="" values="" default=""/>
+					<Tag name="AS::Polling Type" type="enumeration" description="" unit="" values="TCF,UPI,UPI2,UPI3,ORA" default="TCF"/>
 					<Tag name="AS::Polling Stream ID" type="" description="Specify coma separated list of TCF Stream keys or MVS job names" unit="" values="" default=""/>
 					<Tag name="AS::Polling Table List" type="" description="Comma separated list of tables" unit="" values="" default=""/>
 					<Tag name="AS::Polling Interval" type="int" description="Time interval in minutes between attempts " unit="" values="" default=""/>
@@ -527,21 +581,23 @@ BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwf/////////
 4P//4OD/4OD/4ODg///g4OD//+Dg/+Dg/+Dg4P/g4ODg///g4P/g4P/g/+D/4ODg4P//4P//
 /+Dg/+Dg////4OD//+Dg4ODg4ODg4ODg4ODg/wf//////////////////wcHBwcHBwcHBwcH
 BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=</Icon>
-				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAKZBs0hVpOJYrgEAACAIAAAHABEAc3RyLmRhdFVUDQAHv3U9V791PVe/dT1X
-tZVPT8JAEMXfFRO/Q9MTJkbjVU8CaeQgQalcDAeiRZvwL7RoiOG7+2bKoi1bXBpJU7rdvn37
-m+lMSfCOIeaI4GHCUYwpR184xQlqeMWCc5+cGyLlsw/qku2KOs5wo8pMfckjRBMBHbq6IqVq
-wdXJRjHnneyQcq2PC+rkeObpb71qVIw4U+d5R5eEnkO86YrM/ZpH3t/HuXq0dS+ZS3l/y/2E
-c8o4xN/T08RWpGlT/5tiTW2Esfp5W6ZDiVrqkfKZ4Rlj5UDTOgpNgCU9xgeyBHtZylY9oVNY
-lV1tleBhoHzl9RRwP4nSXknVaiikx5IeL5oriUVUC+oi3kvOfFw55CeskJ08bZYbd/K+vldR
-xhv6GDNI5442eSrSl3H097Afi75JVqnCiOzSpz3tj5TqInU5QW8Pd9kaG7WpRxfuLt1mZJZv
-YAKpyVh7W96FO3nwT+TZuKjL95GJTjqpwVpPVGv4Q44mdJhBvvIpKWL+rkqcq3TYX3uaHd2z
-16jYbbYM7qrs2XOP9xEPuNcoV5B/Hls81Xyy73dHu9zuW5aJ3SjlTZodBrl4fzKTXdf4BlBL
-AQIXCxQAAAAIAKZBs0hVpOJYrgEAACAIAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQF
-AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAExiLUzgyy5wEgIAAFQKAAAHABEAc3RyLmRhdFVUDQAHHvlZWh75WVoe+Vla
+tZZNT8JAEIbfKyb+B8JJEz/iVU8CaeQg+FG5GA4NVG1EIbRojPG/+84sRbrtlkIkTem2nXnn
+2enMLjFeEGCKEHW8cRThnaNv7GMPNYww47NPPguQ8N0H7eKlxwEOcaGWxvqUh48WPCrcqEdC
+qxm944XFlHcSIaFvAye0k+ORZ2OpVaPFE58c8LyiSkzNAM/qYdTPeWT1GzhSjY7GkmcJ7y8Z
+TzjfOQ/Rr+uZzs2m6dB+leKHtiHGqldfMm1K1FaNhO9SnjG+KtC0d0LjYU6N8YYsXimLy+sB
+XcvLXIsqoY6B8rnryWM8mWVxJW1XQz415tQYaq5kLmI1o13Ie8lZA2cV8uNvkZ0srclNdfK+
+flexjBb0ESaQzn1a5Mmmd3H0S9h3Rd8iq1RhSHbp03vtj4TWNrWb4L6E2+VTRJ3WYxXuG6pN
+yCxrYAypyUh7W75FdXLvn8jN2LbL9lE6O+mkJms9VtuU3+fojQoTyCqfkCLi75dDeZsOWxcz
+jVg9e00qHGc4/kjKOHxadKgyJZHUnM+osjfYK2MRgc2Q/YLub2j7tXN+m86gyTdDvHI/MyvW
+iM/MOFjksE2tmFFDKshaZna+8vnkuTbba6qy9fT/w0xjjzT368h6pWRuv07Oz4xc/natp0e+
+6/K2xR1nfqv0yB1ucY3VisxX4HY6prK7ujMU67rykZ+ldH8aYeDMrlx/8AtQSwECFwsUAAAA
+CABMYi1M4MsucBICAABUCgAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHHvlZWlBL
+BQYAAAAAAQABAD4AAABIAgAAAAA=</Image>
 				<AppliesTo>
 					<Apply type="Activity">
 						<Property name="_Tag" value="0"/>
-						<Property name="_tagGroupings" value="TCF::Key Columns=Properties;TCF::Pattern=Properties;TCF::RQM Type=Properties;TCF::Delete Rows Added By Any Process=Properties;TCF::Truncate Target=Flags;TCF::Verification Flag=Flags;TCF::Collect Stats=Flags;TCF::Process Filter List=Flags;TCF::Process Filter=Flags;TCF::Business Temporality=Business Temporality;TCF::BT Backdated data=Business Temporality;TCF::BT Key Columns=Business Temporality;TD::User Name=Teradata;TCF::Effective Date=Process;TCF::Expiry Date=Process;"/>
+						<Property name="_tagGroupings" value="TCF::Pattern=Properties;TCF::RQM Type=Properties;TCF::Key Columns=Properties;TCF::Delete Rows Added By Any Process=Properties;TCF::Truncate Target=Flags;TCF::Verification Flag=Flags;TCF::Collect Stats=Flags;TCF::Process Filter=Flags;TCF::Process Filter List=Flags;TCF::Business Temporality=Business Temporality;TCF::BT Backdated data=Business Temporality;TCF::BT Key Columns=Business Temporality;TCF::BT Input Type=Business Temporality;TD::User Name=Teradata;TCF::Effective Date=Process;TCF::Expiry Date=Process;"/>
 						<Property name="_tagGroups" value="Properties,Flags,Business Temporality,Teradata,Process"/>
 						<Property name="isReadOnly" value="false"/>
 						<Property name="isSingleExecution" value=""/>
@@ -551,7 +607,7 @@ AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="TCF::Business Temporality" type="enumeration" description="" unit="" values="0,1" default="0"/>
+					<Tag name="TCF::BT Input Type" type="enumeration" description="The input source could be either Delta or Full Input:&#xA;&#xA;	- Delta: The source has only subset of current records. In this case, the input records will be compared and output rows only generated based on the inputs.&#xA;	- Full: The source has a complete set of current records. In this case, the input records will be compared and output rows will be generated based on the inputs and also based on existing current records in the target table missing from input." unit="" values="Delta,Full" default="Delta"/>
 					<Tag name="TCF::Collect Stats" type="enumeration" description="" unit="" values="0,1" default="0"/>
 					<Tag name="TCF::Delete Rows Added By Any Process" type="enumeration" description="" unit="" values="Y,N" default="N"/>
 					<Tag name="TCF::Effective Date" type="" description="TCF Process Effective date is used in &quot;TCF Loop&quot; to determine whether process can be executed on a given TCF Business date or not." unit="" values="" default=""/>
@@ -566,6 +622,7 @@ AAe/dT1XUEsFBgAAAAABAAEAPgAAAOQBAAAAAA==</Image>
 					<Tag name="TCF::BT Backdated data" type="enumeration" description="Specify how to process backdated data" unit="" values="Insert,Override,Disregard" default="Insert"/>
 					<Tag name="TCF::BT Key Columns" type="" description="List of key columns used to ..." unit="" values="" default=""/>
 					<Tag name="TCF::Process Filter List" type="" description="Comma separated list of additional TCF process names need to be included in the output view WHERE condition." unit="" values="" default=""/>
+					<Tag name="TCF::Business Temporality" type="enumeration" description="" unit="" values="0,1" default="0"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="OCDB Stream" alias="Oracle Cache DB Stream" metatype="OCDB Stream" notes="" cx="150" cy="100" bgcolor="10198015" fontcolor="16777215" bordercolor="6710886" borderwidth="1" hideicon="0">

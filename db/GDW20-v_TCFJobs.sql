@@ -15,7 +15,10 @@ SELECT	 job.object_id
 		,job.Note			as "Note.Formatted"
 		,job.Status			as Status
 		
-		,ptrn.Value			as "TCF::Pattern"
+		,CASE WHEN job.Stereotype = 'TCF C-Delta'
+		      THEN 'Composite Delta'
+		      ELSE ptrn.Value			
+		 END				as "TCF::Pattern"
 		,rqmt.Value			as "TCF::RQM Type"		
 		
 		,viw.ViewName		as Output_ViewName
@@ -36,7 +39,12 @@ JOIN		t_connector			cnc1	ON cnc1.start_object_id	= job.object_id
 JOIN		GDW20.v_views		viw		ON viw.object_id		= cnc1.end_object_id
 -- Target Table
 JOIN		t_connector			cnc2	ON cnc2.start_object_id	= viw.object_id
-JOIN		GDW20.v_tables		tbl		ON tbl.object_id		= cnc2.end_object_id
+JOIN		GDW20.v_tables		tbl		ON tbl.object_id		= cnc2.end_object_id AND tbl.Status <> 'Decommissioned'
 
 
-WHERE	job.stereotype	= 'TCF Job'
+WHERE	job.stereotype	IN ('TCF Job','TCF C-Delta')
+
+GO
+
+SELECT * FROM GDW20.v_TCFJobs
+WHERE Package_ID IN (SELECT Package_ID FROM t_package where Name = 'Planning Monthly')

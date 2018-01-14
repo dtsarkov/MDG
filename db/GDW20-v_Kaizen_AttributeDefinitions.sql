@@ -130,11 +130,8 @@ GO
 
 select * From GDW20.v_Kaizen_AttributeDefinitions
 where Package_ID in (
-	select Package_ID from t_package where Name = 'Refactor RSS Base Fact Data Model'
+	select Package_ID from t_package where ea_guid = '{DE899E59-0C3A-4944-9738-B8C9438445AE}'
 )	
 order by [column.ID]
 
-select * from t_diagram
-where Package_ID in (
-	select Package_ID from t_package where Name = 'Refactor RSS Base Fact Data Model'
-)	
+

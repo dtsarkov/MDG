@@ -19,7 +19,7 @@
 					<Apply type="Diagram_Component">
 						<Property name="alias" value="PhysicalDataModel"/>
 						<Property name="diagramID" value="GDW20PDM"/>
-						<Property name="pdata" value="HideParents=1;UseAlias=0;HideStereo=1;SuppCN=0;"/>
+						<Property name="pdata" value="HideParents=1;UseAlias=0;HideStereo=1;SuppCN=0;OpParams=2;"/>
 						<Property name="styleex" value="VisibleAttributeDetail=0;HideConnStereotype=1;AdvancedConnectorProps=0;TConnectorNotation=Information Engineering;TExplicitNavigability=0;"/>
 						<Property name="toolbox" value="GDW 2.0 Data Modeling"/>
 					</Apply>
@@ -28,7 +28,7 @@
 			<Stereotype name="Data Flow Diagram" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Diagram_Component">
-						<Property name="pdata" value="HideParents=0;UseAlias=0;HideOps=1;HideAtts=1;"/>
+						<Property name="pdata" value="HideParents=0;UseAlias=0;HideOps=1;HideAtts=1;OpParams=2;"/>
 						<Property name="alias" value="DataFlow"/>
 						<Property name="diagramID" value="GDW20DataFlow"/>
 						<Property name="toolbox" value="GDW 2.0 Data Toolbox"/>

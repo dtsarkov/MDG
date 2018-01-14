@@ -146,7 +146,7 @@ UNION ALL
 
 -- Indexes
 -- ------------------------------------------------------------------------------------------------------
-SELECT	 do.sequence*20000				
+SELECT	 do.sequence*10000+2000
 		+COALESCE(pkg.TPos+1,1)*1000000+COALESCE(d.TPos+1,1)*100000	
 										AS "COLUMN.ID"
 		,pkg.package_id
@@ -170,3 +170,41 @@ WHERE	d.StyleEx		like '%GDW 2.0 Diagrams::Physical Data Model%'
 and		o.stereotype	= 'table'
 and		o.abstract		= 0
 and		o.status		in ('Proposed','Modified')
+
+UNION ALL
+
+-- Partitions
+-- ------------------------------------------------------------------------------------------------------
+SELECT	 do.sequence*10000+3000
+		+COALESCE(pkg.TPos+1,1)*1000000+COALESCE(d.TPos+1,1)*100000	
+										AS "COLUMN.ID"
+		,pkg.package_id
+		,pkg.parent_id 
+		,'<b><font color="darkgrey">'
+		+idx.PartitionName
+		+'</b></font>'					AS "ColumnCode.Formatted"
+		,NULL							AS ColumnName
+		,'PARTITION'					AS ColumnType
+		,NULL							AS ColumnDefault
+		,NULL							AS ColumnNullFlag
+		,idx.PartitionCode				AS ColumnCompression
+		,convert(varchar,o.Note)		AS "Notes.Formatted" 
+FROM	t_diagram			d	
+JOIN	t_package			pkg	ON pkg.package_id	= d.package_id
+JOIN	t_diagramobjects	do	ON d.diagram_id		= do.diagram_id
+JOIN	t_object			o	ON o.object_id		= do.object_id
+JOIN	GDW20.v_partitions	idx	ON idx.object_id		= do.object_id
+
+WHERE	d.StyleEx		like '%GDW 2.0 Diagrams::Physical Data Model%'
+and		o.stereotype	= 'table'
+and		o.abstract		= 0
+and		o.status		in ('Proposed','Modified')
+
+GO
+
+SELECT * FROM GDW20.v_Kaizen_ColumnDefinitions
+WHERE	package_id in (
+			select package_id from t_package where ea_guid = '{DE899E59-0C3A-4944-9738-B8C9438445AE}'
+		)
+order by [COLUMN.ID]		
+

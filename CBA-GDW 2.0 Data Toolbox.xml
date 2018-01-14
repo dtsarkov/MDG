@@ -14,6 +14,7 @@
 					<Tag name="GDW 2.0::TCF Job(UML::Activity)" type="" description="" unit="" values="" default="TCF Process"/>
 					<Tag name="GDW 2.0::TCF C-Delta(UML::Activity)" type="" description="" unit="" values="" default="TCF C-Delta"/>
 					<Tag name="GDW 2.0::TCF Stream(UML::PackagingComponent)" type="" description="" unit="" values="" default="TCF Stream"/>
+					<Tag name="GDW 2.0::TCF System(UML::PackagingComponent)" type="" description="" unit="" values="" default="TCF System"/>
 					<Tag name="GDW 2.0::OCDB Job(UML::Activity)" type="" description="" unit="" values="" default="OCDB Process"/>
 					<Tag name="GDW 2.0::OCDB Stream(UML::PackagingComponent)" type="" description="" unit="" values="" default="OCDB Stream"/>
 				</TaggedValues>
@@ -26,11 +27,23 @@
 					<Tag name="UML::Dependency" type="" description="" unit="" values="" default="Data Flow"/>
 				</TaggedValues>
 			</Stereotype>
+			<Stereotype name="Data Extract" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="GDW 2.0::TCF Export(UML::Activity)" type="" description="" unit="" values="" default="Export Job"/>
+					<Tag name="GDW 2.0::Data File(UML::Artifact)" type="" description="" unit="" values="" default="Data File"/>
+					<Tag name="GDW 2.0::Control File(UML::Artifact)" type="" description="" unit="" values="" default="Control File"/>
+					<Tag name="GDW 2.0::Folder(UML::Package)" type="" description="" unit="" values="" default="Folder"/>
+				</TaggedValues>
+			</Stereotype>
 			<Stereotype name="Data Vault" notes="" cx="90" cy="70" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="ToolboxPage"/>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="isCollapsed" type="" description="" unit="" values="" default="true"/>
 					<Tag name="GDW 2.0::Hub(UML::Table)" type="" description="" unit="" values="" default="Hub"/>
 					<Tag name="GDW 2.0::Link(UML::Table)" type="" description="" unit="" values="" default="Link"/>
 					<Tag name="GDW 2.0::Satellite(UML::Table)" type="" description="" unit="" values="" default="Satellite"/>

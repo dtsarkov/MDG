@@ -161,6 +161,27 @@ History
 	+ added "Inheritance" connector to Data Modeling toolbox	
 	+ added "Show Details" diagram property to "TCF Stream" and "OCDB Stream" elements
 
+0.39
+-----
+    	+ added new polling type "UPI3"
+	+ created new stereotype "Scope Item"
+
+0.40
+-----
+    	+ added new element "Data File"
+	+ added new element "Control File"
+	+ added new element "TCF Extract"
+	+ add new tag "TCF::BT Expiry Missing Records" to "TCF Job" element
+
+
+	add "AS::Project" and "TCF::Cycle_Freq_Code" to TCF Stream element
+	add Effective and Expiry dates to TCF Job element picture
+	change default settings for data flow diagram 
+		Elements: show attributes : ON
+		Show additional parents: OFF
+	"TCS Process" pattern: 
+		change color of the input view to "manually create view color"
+		refresh TCF job to reflect new tagged values
 
 	- added "TCF System" element 
 	add Role element
@@ -168,9 +189,6 @@ History
 
 TO-DO List  (N - Nice to have, M - Must have, B - Bug)
 -------------------------------------------------------------------------------
-	create "Wrapping View" element
-	change Jobs "_metatype" 
-	create "Measure Derivation" pattern
 	create "Detailed Design Specification" docment pattern and migrate corresponding document teamplates
 N	Change "AND"/"OR" elments border color (default border color does not work)
 N	Don't show stereotype on "Send Event" connector
