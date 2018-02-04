@@ -104,7 +104,7 @@ SELECT	 do.sequence*1000
 			  ELSE NULL 
 		 END						AS ColumnFlags
 		,coalesce('<b>'+ta.Value+':</b> ','')
-		+convert(varchar(4000),a.Notes)	AS "Notes.Formatted" 
+		+convert(varchar(4000),coalesce(a.Notes,''))	AS "Notes.Formatted" 
 
 FROM	t_diagram				d	
 JOIN	t_package				pkg	ON pkg.package_id		= d.package_id
@@ -130,7 +130,7 @@ GO
 
 select * From GDW20.v_Kaizen_AttributeDefinitions
 where Package_ID in (
-	select Package_ID from t_package where ea_guid = '{DE899E59-0C3A-4944-9738-B8C9438445AE}'
+	select Package_ID from t_package where ea_guid = '{FA9029CB-30F0-4229-AF3E-FE98ABB21E61}'
 )	
 order by [column.ID]
 

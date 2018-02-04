@@ -171,6 +171,7 @@ History
     	+ added new element "Data File"
 	+ added new element "Control File"
 	+ added new element "TCF Extract"
+
 	+ add new tag "TCF::BT Expiry Missing Records" to "TCF Job" element
 
 

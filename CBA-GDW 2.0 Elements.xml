@@ -245,10 +245,10 @@ suL/suL/suL/suL/suL/suL/suL/suL/suL/suL/suL/FQCIFQCIsuL/suL/suL/suL/suL/
 suL/suL/suL/suL/suL/suL/suL/suL/suL/wMDAFQCIFQCIwMDAFQCIwMDAFQCIwMDAFQCI
 wMDAFQCIwMDAFQCIwMDAFQCIwMDAFQCIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
-UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
-aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
-cwA9ADsAUwBhAHYAZQBUAGEAZwA9AEIANAA2ADEARQAxADMARQA7AAAAAAAAAAAAAAAA
+wMDAwMDAwMDAwMDAbgBwAHUAdABzACAAYQBuAGQAIABhAGwAcwBvACAAYgBhAHMAZQBkACAA
+bwBuACAAZQB4AGkAcwB0AGkAbgBnACAAYwB1AHIAcgBlAG4AdAAgAHIAZQBjAG8AcgBkAHMA
+IABpAG4AIAB0AGgAZQAgAHQAYQByAGcAZQB0ACAAdABhAGIAbABlACAAbQBpAHMAcwBpAG4A
+ZwAgAGYAcgBvAG0AIABpAG4AcAB1AHQALgANAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AA==</Icon>
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAKBTgkr2DJNmhAEAAMAFAAAHABEAc3RyLmRhdFVUDQAHbNLgWGzS4Fhs0uBY
 vVNNS8NAFJxrBP9DsZcKBevXSTxIUTxIFS30WGI3poUmSrJVRPzvztvN5stUmhwkZPP2Zebt
@@ -331,7 +331,7 @@ wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAdQBwAHAAQwBvAG4AbgBlAGMAdABvAHIATABhAGIAZQBsAHMAPQAwADsA
 UAByAGkAbgB0AFAAYQBnAGUASABlAGEAZABGAG8AbwB0AD0AMAA7AFMAaABvAHcAQQBzAEwA
 aQBzAHQAPQAwADsAUwB1AHAAcAByAGUAcwBzAGUAZABDAG8AbQBwAGEAcgB0AG0AZQBuAHQA
-cwA9ADsAUwBhAHYAZQBUAGEAZwA9AEIANAA2ADEARQAxADMARQA7AAAAAAAAAAAAAAAA
+cwA9ADsAUwBhAHYAZQBUAGEAZwA9AEYARAA2ADYAMgAxADEAQQA7AAAAAAAAAAAAAAAA
 AA==</Icon>
 				<AppliesTo>
 					<Apply type="Activity">
@@ -365,10 +365,10 @@ wMDAf39/wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAf39/f39/wMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAf39/f39/wMDAf39/wMDAf39/wMDAf39/
 wMDAf39/wMDAf39/wMDAf39/wMDAf39/wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
 wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+wMDAwMDAwMDAwMDAPQAgAEUAbgBkAF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAG4AZAAgAGQA
+bwBiAGoALgBPAGIAagBlAGMAdABfAEkARAA9AFMAdABhAHIAdABfAE8AYgBqAGUAYwB0AF8A
+SQBEACAAYQBuAGQAIABkAG8AYgBqAC4ARABpAGEAZwByAGEAbQBfAEkARAA9ACMAIwAgAE8A
+cgBkAGUAcgAgAGIAeQAgAG8AYgBqAC4ATgBhAG0AZQAAAAAAAAAAAAAAAAAAAAAAAAAA
 AA==</Icon>
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIACqGzEgkNJQFggEAAL4FAAAHABEAc3RyLmRhdFVUDQAHgZJdV4GSXVeBkl1X
 vVPBSsNAEH3XCP5DsZcKBaviSTxoUTxV0EK9SezGtNBESbaKiP/um91sso2pNDlIyO7M7JvZ
@@ -701,11 +701,14 @@ AAAAAA==</Image>
 						<Property name="_OpPro" value="0"/>
 						<Property name="_OpPub" value="0"/>
 						<Property name="_Tag" value="0"/>
-						<Property name="_tagGroupings" value="TCF::Catch up mode=TCF Properties;TCF::MyService Support Group=TCF Properties;TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;AS::profile=Autosys Properties;AS::machine=Autosys Properties;AS::Prefix=Autosys Properties;AS::start_times=Autosys Properties;AS::days_of_week=Autosys Properties;"/>
-						<Property name="_tagGroups" value="TCF Properties,Autosys Properties"/>
+						<Property name="_tagGroupings" value="TCF::Catch up mode=TCF Properties;TCF::Business Date Offset=TCF Properties;TCF::Stream ID=TCF Properties;TCF::MyService Support Group=TCF Properties;TCF::Stream Priority=TCF Properties;AS::days_of_week=Autosys Properties;AS::start_times=Autosys Properties;AS::Prefix=Autosys Properties;AS::machine=Autosys Properties;AS::profile=Autosys Properties;CMDB::Application=CMDB;CMDB::CI Number=CMDB;"/>
+						<Property name="_tagGroups" value="TCF Properties,Autosys Properties,CMDB"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="CMDB::Application" type="" description="Stream supporting application name" unit="" values="" default=""/>
+					<Tag name="CMDB::CI Number" type="" description="Stream corresponding CI Number" unit="" values="" default=""/>
+					<Tag name="TCF::Stream Priority" type="enumeration" description="Priority of the stream" unit="" values="P1,P2,P3,P4" default="P2"/>
 					<Tag name="AS::days_of_week" type="" description="" unit="" values="" default="All"/>
 					<Tag name="AS::machine" type="" description="" unit="" values="" default="au_cba_bidseng_91_buh"/>
 					<Tag name="AS::Prefix" type="" description="au_cba_&lt;System&gt;_p01_&lt;Source System&gt;_wd_&lt;Stream ID&gt;_&lt;Description&gt;" unit="" values="" default="au_cba_rbsbus_p01_SSS_wd_SID_DESCR"/>
